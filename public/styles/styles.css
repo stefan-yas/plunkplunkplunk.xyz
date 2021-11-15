@@ -72,7 +72,7 @@ p {
 }
 
 .plunk-grid-container {
-    grid-template-columns: auto auto auto;
+    grid-template-columns: auto auto;
     display: grid;
     align-items: center;
     grid-gap: 10px;
@@ -81,20 +81,8 @@ p {
     width: auto;
   }
   
-  #grid-item1 {
-    grid-row-start: 1;
-  }
-  
-  #grid-item2 {
-    grid-row-start: 1;
-  }
-  
-  #gid-item3 {
-    grid-row-start: 2;
-  }
-
-  #gid-item4 {
-    grid-row-start: 2;
+  .grid-item {
+      max-width: 20vw;
   }
 
 .main-container {
