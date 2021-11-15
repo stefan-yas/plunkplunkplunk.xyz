@@ -4,7 +4,7 @@ body {
     margin: auto;
     padding: 2%;
     font-family: 'JetBrains Mono', monospace;
-    font-size: 25px;
+    font-size: 20px;
     line-height: 2;
     color: #194b3f;
     background-image: url("../img/bg.svg");
@@ -65,6 +65,28 @@ p {
     padding: 10px;
     margin: 15px;
 }
+
+.plunk-grid-container {
+    grid-template-columns: auto auto auto;
+    display: grid;
+    align-items: center;
+    grid-gap: 10px;
+    padding: 10px;
+    border-radius: 10px;
+    width: auto;
+  }
+  
+  #grid-item1 {
+    grid-row-start: 1;
+  }
+  
+  #grid-item2 {
+    grid-row-start: 2;
+  }
+  
+  #gid-item3 {
+    grid-row-start: 3;
+  }
 
 .main-container {
     display: flex;
@@ -230,7 +252,7 @@ input::placeholder {
     }
 
     p {
-        font-size: 25px;
+        font-size: 12px;
     }
 
     .input-container {
@@ -280,7 +302,7 @@ input::placeholder {
     }
 
     p {
-        font-size: 20px;
+        font-size: 15px;
     }
 
     .input-container {
@@ -327,7 +349,7 @@ input::placeholder {
     }
 
     p {
-        font-size: 20px;
+        font-size: 12px;
     }
 
     .input-container {

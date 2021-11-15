@@ -18,6 +18,6 @@ function reGen() {
 }
 
 function urlDetermine() {
-    var url = document.getElementById('random').value
-    window.open(url);
+    var url = document.getElementById('random').value;
+    window.open(url, '_blank').focus;
 }
