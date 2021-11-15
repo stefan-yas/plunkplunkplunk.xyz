@@ -9,15 +9,18 @@ function generateString(length) {
         result += characters.charAt(Math.floor(Math.random() * charactersLength));
     }
     return result;
+
+    
 };
 
 function reGen() {
     var inputField = document.getElementById("random");
     var linkResult = "prnt.sc/" + generateString(6);
     inputField.value = linkResult;
+    console.log("linkresult: "+linkResult);
 }
 
 function urlDetermine() {
     var url = document.getElementById('random').value;
-    window.open(url, '_blank').focus;
+    window.open("https://"+url, '_blank').focus;
 }
