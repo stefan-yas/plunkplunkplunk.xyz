@@ -204,6 +204,12 @@ input::placeholder {
     color: #102621;
 }
 
+.javascript {
+    width: 2em;
+    margin: 15px;
+    margin-bottom: 0;
+}
+
 #ascii {
     font-size: 20px;
     font-weight: 400;
@@ -373,4 +379,8 @@ input::placeholder {
         border-width: 1px;
     }
 
+    .javascript {
+        width: 1em;
+    }
+    
 }
