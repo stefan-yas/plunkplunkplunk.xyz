@@ -182,6 +182,14 @@ input::placeholder {
     font-size: 30px;
 }
 
+span.badge[contenteditable] {
+    display: inline-block;
+}
+span.badge[contenteditable]:empty::before {
+    display: inline-block;
+    content: 'TAP the circle';
+}
+
 label {
     padding-top: 10px;
 }
