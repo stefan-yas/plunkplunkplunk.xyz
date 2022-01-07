@@ -19,7 +19,7 @@
 
 </head>
 
-<body>
+<body onkeydown="logKey(); updateAverage();">
 
     <header>
         <div class="logo">
@@ -32,14 +32,12 @@
     <main>
         <h1>bpm tapper</h1>
 
-        <h2>click/tap on the circle or press the spacebar consistently and discover the bpm of your taps</h2>
+        <h2>click/tap on the circle or press any keyboard key consistently and discover the bpm of your taps</h2>
 
         <div class="main-container-tapper">
             <div class="input-container-tapper">
 
-                <img id="ellipse" src="/img/ellipse.svg">
-
-                <span id="BPM" placeholder="120 BPM"></span>
+                <img id="ellipse" src="/img/ellipse.svg" onclick="logKey(); updateAverage();">
 
                 <span contenteditable="true" id="BPM" class="badge alert-info"></span></span>
 
