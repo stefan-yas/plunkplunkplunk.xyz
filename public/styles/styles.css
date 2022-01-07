@@ -72,16 +72,16 @@ p {
 }
 
 .plunk-grid-container {
-    grid-template-columns: auto auto;
+    grid-template-columns: auto;
     display: grid;
     align-items: center;
     grid-gap: 10px;
     padding: 10px;
     border-radius: 10px;
-    width: auto;
 }
 
 .main-container {
+    width: 100%;
     display: flex;
     justify-content: center;
     flex-direction: column;
