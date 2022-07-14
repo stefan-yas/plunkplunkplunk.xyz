@@ -308,7 +308,7 @@ label {
 .rectangle {
     width: 180px;
     height: 100px;
-    background-color: #191919;
+    background-color: #2d3319;
     border-radius: 7%;
     position: absolute;
 }
@@ -354,13 +354,14 @@ label {
 .m {
     width: 14px;
     height: 35px;
-    background-color: #191919;
+    background-color: #2d3319;
     margin: 2%;
 }
 
 .j {
     background-color: transparent;
 }
+
 
 @media only screen and (max-width: 1100px) {
 

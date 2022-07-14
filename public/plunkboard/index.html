@@ -33,28 +33,30 @@
     <main>
         <h1>plunkboard</h1>
 
+        <h2>click on the keys to plunk</h2>
+
         <div class="plunkboard-container">
 
-            <div class="rectangle">
-                <div class="black-keys">
-                    <div class="h" id="h"></div>
-                    <div class="i" id="i"></div>
-                    <div class="j" id="j"></div>
-                    <div class="k" id="k"></div>
-                    <div class="l" id="l"></div>
-                    <div class="m" id="m"></div>
-                </div>
-                <div class="white-keys">
-                    <div class="a" id="a"></div>
-                    <div class="b" id="b"></div>
-                    <div class="c" id="c"></div>
-                    <div class="d" id="d"></div>
-                    <div class="e" id="e"></div>
-                    <div class="f" id="f"></div>
-                    <div class="g" id="g"></div>
+                <div class="rectangle">
+                    <div class="black-keys">
+                        <div class="h" id="h" onclick="playCSharp()"></div>
+                        <div class="i" id="i" onclick="playDSharp()"></div>
+                        <div class="j" id="j" onclick="playFSharp()"></div>
+                        <div class="k" id="k" onclick="playGSharp()"></div>
+                        <div class="l" id="l" onclick="playASharp()"></div>
+                        <div class="m" id="m"></div>
+                    </div>
+                    <div class="white-keys">
+                        <div class="a" id="a" onclick="playC()"></div>
+                        <div class="b" id="b" onclick="playD()"></div>
+                        <div class="c" id="c" onclick="playE()"></div>
+                        <div class="d" id="d" onclick="playF()"></div>
+                        <div class="e" id="e" onclick="playG()"></div>
+                        <div class="f" id="f" onclick="playA()"></div>
+                        <div class="g" id="g" onclick="playB()"></div>
+                    </div>
                 </div>
             </div>
-        </div>
 
 
 
@@ -80,7 +82,19 @@
     </footer>
 
 
-    <script src=""></script>
+    <script src="plunkboard.js"></script>
+    <audio id="audioC" src="../media/C.mp3"></audio>
+    <audio id="audioCSharp" src="../media/CSharp.mp3"></audio>
+    <audio id="audioD" src="../media/D.mp3"></audio>
+    <audio id="audioDSharp" src="../media/DSharp.mp3"></audio>
+    <audio id="audioE" src="../media/E.mp3"></audio>
+    <audio id="audioF" src="../media/F.mp3"></audio>
+    <audio id="audioFSharp" src="../media/FSharp.mp3"></audio>
+    <audio id="audioG" src="../media/G.mp3"></audio>
+    <audio id="audioGSharp" src="../media/GSharp.mp3"></audio>
+    <audio id="audioA" src="../media/A.mp3"></audio>
+    <audio id="audioASharp" src="../media/ASharp.mp3"></audio>
+    <audio id="audioB" src="../media/B.mp3"></audio>
 
 </body>
 
