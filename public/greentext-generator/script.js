@@ -107,7 +107,7 @@ function autoUpdate() { // this functions starts when page loads
             //console.log("boop");
         }
 
-    }, 2000); // check every 2 seconds
+    }, 3000); // check every x seconds
 }
 
 function drawImageOutput() {
@@ -117,6 +117,10 @@ function drawImageOutput() {
     container.textContent = ""; // delete previous element
 
     function scrollDown() {  
+        // show download button
+        const downloadButton = document.getElementById("download-greentext");
+        downloadButton.style.display = "block";
+
         container.scrollIntoView({behavior: "smooth"});
     }
 
@@ -128,7 +132,7 @@ function drawImageOutput() {
         scrollDown();
     });*/
     
-    html2canvas(document.getElementById("preview-image-and-text"), {/*allowTaint: true*/ useCORS: true}).then(canvas => {
+    html2canvas(document.getElementById("preview-container"), {/*allowTaint: true*/ useCORS: true}).then(canvas => {
         document.getElementById("final-greentext").appendChild(canvas); // create canvas using a library
         canvas.setAttribute("id", "outputCanvas"); // set id to canvas
 

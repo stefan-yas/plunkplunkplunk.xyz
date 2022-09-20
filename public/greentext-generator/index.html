@@ -17,6 +17,8 @@
     <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono&display=swap" rel="stylesheet">
     <link rel="icon" type=”image/svg+xml” href="../img/favicon.svg" />
     <link rel="canonical" href="https://plunkplunkplunk.xyz/plunk/greentext-generator" />
+    <script defer type="text/javascript" src="https://html2canvas.hertzen.com/dist/html2canvas.min.js"></script>
+	<script type="text/javascript" src="./script.js"></script>
 
 </head>
 
@@ -72,20 +74,7 @@
             <div id="preview-image-and-text">
                 <div id="preview-image"><img
                         src="https://i.pinimg.com/736x/ab/f4/e3/abf4e3963a4d4b76fc574e53baff8194.jpg"></div>
-                <div id="preview-text">Et amet aliqua id velit id amet id consequat ex non reprehenderit commodo.
-                    Nisi duis consectetur laborum duis nisi proident consectetur est dolore esse nulla. Et sint
-                    ullamco reprehenderit ipsum nulla sunt nisi irure exercitation reprehenderit anim et. Ipsum enim
-                    velit id nisi sint cupidatat. Ad ea duis anim fugiat est tempor exercitation tempor aute in.
-                    Nisi et commodo minim nostrud nostrud id.<br><br>
-
-                    Consequat incididunt non in sunt qui mollit irure aute et officia officia tempor deserunt. Eu
-                    proident sint consectetur consequat excepteur. Culpa occaecat est incididunt proident in aliqua
-                    officia minim. Anim aliquip pariatur velit adipisicing duis.<br><br>
-
-                    Labore laborum veniam enim ex. Quis ad nisi aliquip irure commodo pariatur quis. Minim mollit
-                    non ex est fugiat tempor anim do tempor. Ipsum ipsum esse aliqua ullamco aliquip proident
-                    proident culpa laborum. Consequat sit irure nostrud anim sunt excepteur proident id commodo
-                    aliqua sit minim pariatur.</div>
+                <pre id="preview-text"></pre>
             </div>
         </div>
 
@@ -104,25 +93,25 @@
 
         <div id="greentext-input-container">
             <div id="styling-buttons">
-                <button id="normal-text">Normal Text</button>
-                <button id="quote-text">Quote Text</button>
+                <button id="normal-text" onclick="makeNormalText();">Normal Text</button>
+                <button id="quote-text" onclick="makeQuotedText();">Quote Text</button>
             </div>
 
             <div id="textarea">
                 <label for="greentext-user-text">Type out your greentext here:</label>
-                <textarea id="greentext-user-text" name="greentext-user-text" placeholder=">be me" rows="7"
+                <textarea id="greentext-user-text" onchange="changePreview();" name="greentext-user-text" placeholder=">be me" rows="7"
                     cols="75"></textarea>
             </div>
         </div>
 
-        <button id="generate-greentext">Generate</button>
+        <button id="generate-greentext" onclick="drawImageOutput();">Generate</button>
 
         <div id="final-greentext">
-            <img
-                src="https://64.media.tumblr.com/d681b083a1cb14a3158396c48da14dec/95df193580dfe4b5-d3/s1280x1920/531b077ac06ccc0d3cd38480245405c63024d1e0.png">
+            <!-- <img
+                src="https://64.media.tumblr.com/d681b083a1cb14a3158396c48da14dec/95df193580dfe4b5-d3/s1280x1920/531b077ac06ccc0d3cd38480245405c63024d1e0.png"> -->
         </div>
 
-        <button id="download-greentext">Download</button>
+        <button id="download-greentext" onclick="downloadImage();">Download</button>
 
     </main>
 
