@@ -26,6 +26,31 @@
     --divider: #194b3f;
 }
 
+/* General */
+
+button, #upload-image {
+    font-family: 'JetBrains Mono', monospace;
+    border: 0;
+    line-height: 2.9;
+    padding: 0 20px;
+    font-size: 1em;
+    text-align: center;
+    color: #194b3f;
+    border: 0.5rem outset rgba(217, 161, 192, .7);
+    border-radius: 10px;
+    background-color: rgba(217, 161, 192, .7);
+}
+
+button:active, #upload-image:active {
+    box-shadow: inset -2px -2px 3px rgba(255, 255, 255, .6),
+        inset 2px 2px 3px rgba(65, 62, 62, 0.6);
+    background-color: rgba(170, 124, 149, 0.7);
+    border: 0.5rem outset rgba(156, 114, 137, 0.7);
+    ;
+}
+
+/* -------- */
+
 .greentext-main {
     display: flex;
     flex-direction: column;
@@ -212,24 +237,7 @@ input:checked+.slider:before {
 }
 
 #upload-image {
-    font-family: 'JetBrains Mono', monospace;
-    border: 0;
-    line-height: 2.9;
-    padding: 0 20px;
-    font-size: 1em;
-    text-align: center;
-    color: #194b3f;
-    border: 0.5rem outset rgba(217, 161, 192, .7);
-    border-radius: 10px;
-    background-color: rgba(217, 161, 192, .7);
-}
-
-#upload-image:active {
-    box-shadow: inset -2px -2px 3px rgba(255, 255, 255, .6),
-        inset 2px 2px 3px rgba(65, 62, 62, 0.6);
-    background-color: rgba(170, 124, 149, 0.7);
-    border: 0.5rem outset rgba(156, 114, 137, 0.7);
-    ;
+    width: auto;
 }
 
 /* ----------------------------------------------------- */
@@ -254,26 +262,7 @@ input:checked+.slider:before {
 
 #normal-text,
 #quote-text {
-    font-family: 'JetBrains Mono', monospace;
-    border: 0;
-    line-height: 2.9;
-    padding: 0 20px;
-    font-size: 1em;
-    text-align: center;
     white-space: nowrap;
-    color: #194b3f;
-    border: 0.5rem outset rgba(217, 161, 192, .7);
-    border-radius: 10px;
-    background-color: rgba(217, 161, 192, .7);
-}
-
-#normal-text:active,
-#quote-text:active {
-    box-shadow: inset -2px -2px 3px rgba(255, 255, 255, .6),
-        inset 2px 2px 3px rgba(65, 62, 62, 0.6);
-    background-color: rgba(170, 124, 149, 0.7);
-    border: 0.5rem outset rgba(156, 114, 137, 0.7);
-    ;
 }
 
 #greentext-input-container textarea {
@@ -311,27 +300,7 @@ hr.rounded {
 /* ----------------------------------------------------- */
 /* Generate Button */
 
-#generate-greentext {
-    width: 100%;
-    height: 75px;
-    font-family: 'JetBrains Mono', monospace;
-    border: 0;
-    line-height: 2.5;
-    padding: 0 20px;
-    font-size: 1em;
-    text-align: center;
-    color: #194b3f;
-    border: 0.5rem outset rgba(217, 161, 192, .7);
-    border-radius: 10px;
-}
 
-#generate-greentext:active {
-    box-shadow: inset -2px -2px 3px rgba(255, 255, 255, .6),
-        inset 2px 2px 3px rgba(65, 62, 62, 0.6);
-    background-color: rgba(168, 127, 150, 0.7);
-    border: 0.5rem outset rgba(156, 114, 137, 0.7);
-    ;
-}
 
 /* ----------------------------------------------------- */
 /* Result Image */
@@ -348,23 +317,4 @@ hr.rounded {
 
 #download-greentext {
     display: none;
-    width: 100%;
-    height: 75px;
-    font-family: 'JetBrains Mono', monospace;
-    border: 0;
-    line-height: 2.5;
-    padding: 0 20px;
-    font-size: 1em;
-    text-align: center;
-    color: #194b3f;
-    border: 0.5rem outset rgba(217, 161, 192, .7);
-    border-radius: 10px;
-}
-
-#download-greentext:active {
-    box-shadow: inset -2px -2px 3px rgba(255, 255, 255, .6),
-        inset 2px 2px 3px rgba(65, 62, 62, 0.6);
-    background-color: rgba(168, 127, 150, 0.7);
-    border: 0.5rem outset rgba(156, 114, 137, 0.7);
-    ;
 }

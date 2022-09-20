@@ -145,7 +145,7 @@ function drawImageOutput() {
     })
 }
 
-function downloadImage() {
+function downloadFinalImage() {
     const link = document.createElement("a"); // virtual link for download
     link.download = "greentext.png"; // default name for the image
 

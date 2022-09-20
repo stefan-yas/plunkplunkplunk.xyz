@@ -4,8 +4,8 @@
 <head>
     <title>greentext generator | plunk plunk plunk</title>
     <meta charset="UTF-8" />
-    <link rel="stylesheet" href="/styles/styles.css" />
-    <link rel="stylesheet" href="/styles/greentext-generator-styles.css" />
+    <link rel="stylesheet" href="../styles/styles.css" />
+    <link rel="stylesheet" href="../styles/greentext-generator-styles.css" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta property="og:title" content="greentext generator | plunk plunk plunk" />
     <meta property="og:image" content="" />
@@ -26,9 +26,9 @@
 
     <header>
         <div class="logo">
-            <a href="https://plunkplunkplunk.xyz"><img class="desktop" src="/img/title.svg" alt="title"></a>
+            <a href="https://plunkplunkplunk.xyz"><img class="desktop" src="../img/title.svg" alt="title"></a>
 
-            <a href="https://plunkplunkplunk.xyz"><img class="mobile" src="/img/logo-mobile.svg" alt="title"></a></div>
+            <a href="https://plunkplunkplunk.xyz"><img class="mobile" src="../img/logo-mobile.svg" alt="title"></a></div>
 
         <h1>greentext generator</h1>
 
@@ -86,7 +86,8 @@
                     <span class="slider round"></span>
                 </label>
             </div>
-            <button id="upload-image">Upload Image</button>
+            <!-- <button id="upload-image">Upload Image</button> -->
+            <input id="upload-image" oninput="uploadImage();" type="file" accept="image/jpeg, image/jpg, image/png">
         </div>
 
         <hr class="rounded">
@@ -111,7 +112,7 @@
                 src="https://64.media.tumblr.com/d681b083a1cb14a3158396c48da14dec/95df193580dfe4b5-d3/s1280x1920/531b077ac06ccc0d3cd38480245405c63024d1e0.png"> -->
         </div>
 
-        <button id="download-greentext" onclick="downloadImage();">Download</button>
+        <button id="download-greentext" onclick="downloadFinalImage();">Download</button>
 
     </main>
 
