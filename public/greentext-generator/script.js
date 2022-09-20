@@ -1,5 +1,6 @@
 window.onload = () => {
     console.log("initialize");
+    toggleImage();
     autoUpdate();
 };
 
@@ -83,6 +84,10 @@ function changePreview() {
 
     const outputStyled = changedArray.join("\n"); // merge array into a string
     preview.innerHTML = outputStyled; // set value to the preview container
+
+    // scroll down?
+    /*const ccc = document.getElementById("textarea");
+    ccc.scrollIntoView({behavior: "smooth"});*/
 }
 
 function makeQuotedText() { // this function is triggered by button press
@@ -148,3 +153,18 @@ function downloadImage() {
     link.href = document.getElementById("outputCanvas").toDataURL("image/png"); // convert canvas to image
     link.click(); // click the virtual link, which opens the download interface
 }
+
+function toggleImage() {
+    const checkbox = document.getElementById("image-toggle");
+    const image = document.getElementById("preview-image");
+    
+    checkbox.addEventListener("change", function() {
+        if (this.checked) {
+            image.style.display = "block";
+        } else {
+            image.style.display = "none";
+        }
+    });
+}
+
+
