@@ -28,66 +28,98 @@
 
             <a href="https://plunkplunkplunk.xyz"><img class="mobile" src="/img/logo-mobile.svg" alt="title"></a></div>
 
-    </header>
-
-    <main>
         <h1>greentext generator</h1>
 
         <h2>create, style and share your newest greentext</h2>
 
-        <div class="main-container">
+    </header>
 
-            <!-- Date & Style Toggles -->
+    <main class="greentext-main">
 
-            <div class="toggle-container">
+        <!-- Date & Style Toggles -->
+
+        <div class="toggle-container">
+
+            <div class="toggle">
                 <p>Date</p>
-                <div class="toggle">
-                    <label class="switch">
-                        <input id="anonymous" type="checkbox" checked>
-                        <span class="slider round"></span>
-                    </label>
-                </div>
+                <label class="switch">
+                    <input id="anonymous" type="checkbox" checked>
+                    <span class="slider round"></span>
+                </label>
+            </div>
+
+            <div class="toggle">
                 <p>Style</p>
-                <div class="toggle">
-                    <label class="switch">
-                        <input id="greentext-style" type="checkbox" checked>
-                        <span class="slider round"></span>
-                    </label>
-                </div>
+                <label class="switch">
+                    <input id="greentext-style" type="checkbox" checked>
+                    <span class="slider round"></span>
+                </label>
             </div>
 
-            <!-- Preview -->
+        </div>
 
-            <div id="preview-container">
-                <div id="anonymous-date"><span id="anonymous-text">Anonymous</span><span id="greentext-date"></span> </div>
-                <div id="preview-image-and-text">
-                    <div id="preview-image"></div>
-                    <div id="preview-text" contentEditable=true data-text=">be me"></div>
-                </div>
+        <!-- Preview -->
+
+        <div id="preview-container">
+            <div id="anonymous-date-box">
+                <span id="anonymous-text">Anonymous</span>
+                <span id="greentext-date">05/24/22(Tue)12:39:26</span><span id="greentext-random-id">No.165199250</span>
             </div>
 
+            <div id="preview-image-and-text">
+                <div id="preview-image"><img
+                        src="https://i.pinimg.com/736x/ab/f4/e3/abf4e3963a4d4b76fc574e53baff8194.jpg"></div>
+                <div id="preview-text">Et amet aliqua id velit id amet id consequat ex non reprehenderit commodo.
+                    Nisi duis consectetur laborum duis nisi proident consectetur est dolore esse nulla. Et sint
+                    ullamco reprehenderit ipsum nulla sunt nisi irure exercitation reprehenderit anim et. Ipsum enim
+                    velit id nisi sint cupidatat. Ad ea duis anim fugiat est tempor exercitation tempor aute in.
+                    Nisi et commodo minim nostrud nostrud id.<br><br>
 
+                    Consequat incididunt non in sunt qui mollit irure aute et officia officia tempor deserunt. Eu
+                    proident sint consectetur consequat excepteur. Culpa occaecat est incididunt proident in aliqua
+                    officia minim. Anim aliquip pariatur velit adipisicing duis.<br><br>
 
-
-
-
-
-            <!-- <div class="input-container">
-                <button id="generate" type="button" onclick="reGen()">
-                    Generate
-                </button>
-
-                <label>prnt.sc link:</label>
-
-                <div class="go-container">
-                    <input size="10" type="text" id="random" placeholder="prnt.sc/f3290w">
-
-                    <button id="go" type="button" onclick="urlDetermine()">
-                        Go
-                    </button>
-                </div>
+                    Labore laborum veniam enim ex. Quis ad nisi aliquip irure commodo pariatur quis. Minim mollit
+                    non ex est fugiat tempor anim do tempor. Ipsum ipsum esse aliqua ullamco aliquip proident
+                    proident culpa laborum. Consequat sit irure nostrud anim sunt excepteur proident id commodo
+                    aliqua sit minim pariatur.</div>
             </div>
-        </div> -->
+        </div>
+
+        <div id="image-settings">
+            <div class="toggle">
+                <p>Image On/Off</p>
+                <label class="switch">
+                    <input id="image-toggle" type="checkbox" checked>
+                    <span class="slider round"></span>
+                </label>
+            </div>
+            <button id="upload-image">Upload Image</button>
+        </div>
+
+        <div id="greentext-input-container">
+            <div id="styling-buttons">
+                <button id="normal-text">Normal Text</button>
+                <button id="quote-text">Quote Text</button>
+            </div>
+
+            <div id="textarea">
+                <label for="greentext-user-text">Type out your greentext here:</label>
+                <textarea id="greentext-user-text" name="greentext-user-text" placeholder=">be me" rows="7"
+                    cols="75"></textarea>
+            </div>
+        </div>
+
+        <hr class="rounded">
+
+        <button id="generate-greentext">Generate</button>
+
+        <div id="final-greentext">
+            <img
+                src="https://64.media.tumblr.com/d681b083a1cb14a3158396c48da14dec/95df193580dfe4b5-d3/s1280x1920/531b077ac06ccc0d3cd38480245405c63024d1e0.png">
+        </div>
+
+        <button id="download-greentext">Download</button>
 
     </main>
 

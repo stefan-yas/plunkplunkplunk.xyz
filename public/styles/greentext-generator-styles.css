@@ -12,8 +12,28 @@
     --new-style-background: #d6daf0;
     --new-style-normal-text: #000000;
     --new-style-quoted-text: #789922;
-    --new-style-anonymous-text: #117743;
+    --new-style-anonymous-text: #4f8d7d;
     --new-style-anonymous-background: #c9cde8;
+
+    /* <main> background */
+    --main-background: rgba(221, 255, 244, 0.5);
+
+    /* Toggles */
+    --toggle-background: #E4BCD2;
+    --toggle-slider: #2d3319;
+
+    /* Divider */
+    --divider: #194b3f;
+}
+
+.greentext-main {
+    display: flex;
+    flex-direction: column;
+    gap: 1em;
+    background-color: var(--main-background);
+    margin: 1em;
+    padding-left: 14px;
+    padding-right: 14px;
 }
 
 /* Toggles */
@@ -24,6 +44,20 @@
     gap: 20px;
     align-items: flex-end;
     justify-content: flex-end;
+    /* margin: 1em; */
+}
+
+.toggle-container p {
+    background: none;
+    margin: 0px !important;
+    padding: 0px !important;
+}
+
+.toggle {
+    display: flex;
+    gap: 25px;
+    justify-content: center;
+    align-items: center;
 }
 
 .switch {
@@ -46,7 +80,7 @@
     left: 0;
     right: 0;
     bottom: 0;
-    background-color: #ccc;
+    background-color: var(--toggle-background);
     -webkit-transition: .4s;
     transition: .4s;
 }
@@ -58,17 +92,17 @@
     width: 26px;
     left: 4px;
     bottom: 4px;
-    background-color: white;
+    background-color: var(--toggle-slider);
     -webkit-transition: .4s;
     transition: .4s;
 }
 
 input:checked+.slider {
-    background-color: #2196F3;
+    background-color: var(--toggle-background);
 }
 
 input:focus+.slider {
-    box-shadow: 0 0 1px #2196F3;
+    box-shadow: 0 0 1px var(--toggle-background);
 }
 
 input:checked+.slider:before {
@@ -78,6 +112,8 @@ input:checked+.slider:before {
 }
 
 .slider.round {
+    outline-color: var(--toggle-slider);
+    outline-style: solid;
     border-radius: 34px;
 }
 
@@ -95,17 +131,17 @@ input:checked+.slider:before {
     gap: 0;
     align-items: center;
     justify-content: center;
+    font-family: Arial, Helvetica Neue, Helvetica, sans-serif;
 }
 
-/* Preview "Placeholder */
+/* ----------------------------------------------------- */
+/* Anonymous and Date Box */
 
-[contentEditable=true]:empty:not(:focus):before {
-    content: attr(data-text)
-}
-
-#anonymous-date {
+#anonymous-date-box {
+    width: 100%;
     display: flex;
     flex-direction: row;
+    gap: 10px;
     align-items: center;
     justify-content: space-between;
     background-color: var(--new-style-anonymous-background);
@@ -113,8 +149,201 @@ input:checked+.slider:before {
 
 #anonymous-text {
     color: var(--new-style-anonymous-text);
+    font-weight: 600;
 }
 
 #greentext-date {
     color: var(--new-style-normal-text);
 }
+
+/* ----------------------------------------------------- */
+/* Image and Text Box */
+
+#preview-image-and-text {
+    background-color: var(--new-style-background);
+}
+
+#preview-image {
+    float: left;
+    width: 40%;
+}
+
+#preview-image img {
+    max-width: 45%;
+    margin: 5%;
+}
+
+#preview-text {
+    float: none;
+    margin: 5%;
+}
+
+/* ----------------------------------------------------- */
+/* Image Options */
+
+#image-settings {
+    display: flex;
+    flex-direction: row;
+    gap: 50px;
+    align-items: center;
+    justify-content: center;
+    margin: 1em;
+}
+
+#image-settings p {
+    background: none;
+    margin: 0px !important;
+    padding: 0px !important;
+}
+
+#upload-image {
+    font-family: 'JetBrains Mono', monospace;
+    border: 0;
+    line-height: 2.9;
+    padding: 0 20px;
+    font-size: 1em;
+    text-align: center;
+    color: #194b3f;
+    border: 0.5rem outset rgba(217, 161, 192, .7);
+    border-radius: 10px;
+    background-color: rgba(217, 161, 192, .7);
+}
+
+#upload-image:active {
+    box-shadow: inset -2px -2px 3px rgba(255, 255, 255, .6),
+        inset 2px 2px 3px rgba(65, 62, 62, 0.6);
+    background-color: rgba(170, 124, 149, 0.7);
+    border: 0.5rem outset rgba(156, 114, 137, 0.7);
+    ;
+}
+
+/* ----------------------------------------------------- */
+/* Greentext User Input */
+
+#greentext-input-container {
+    display: flex;
+    flex-direction: row;
+    gap: 1em;
+    align-items: center;
+    justify-content: center;
+}
+
+#styling-buttons {
+    display: flex;
+    flex-direction: column;
+    gap: 1em;
+    align-items: center;
+    justify-content: center;
+}
+
+#normal-text,
+#quote-text {
+    font-family: 'JetBrains Mono', monospace;
+    border: 0;
+    line-height: 2.9;
+    padding: 0 20px;
+    font-size: 1em;
+    text-align: center;
+    color: #194b3f;
+    border: 0.5rem outset rgba(217, 161, 192, .7);
+    border-radius: 10px;
+    background-color: rgba(217, 161, 192, .7);
+}
+
+#normal-text,
+#quote-text:active {
+    box-shadow: inset -2px -2px 3px rgba(255, 255, 255, .6),
+        inset 2px 2px 3px rgba(65, 62, 62, 0.6);
+    background-color: rgba(170, 124, 149, 0.7);
+    border: 0.5rem outset rgba(156, 114, 137, 0.7);
+    ;
+}
+
+#greentext-input-container textarea {
+    width: auto;
+    height: auto;
+}
+
+#textarea {
+    display: flex;
+    margin: 0.5em;
+    flex-direction: column;
+    gap: 0.5em;
+    align-items: flex-start;
+    justify-content: center;
+    /* font-family: 'JetBrains Mono', monospace !important;
+    font-size: 20px !important; */
+    font-family: Verdana, Arial, Helvetica, sans-serif !important;
+    font-size: 20px !important;
+
+}
+
+#textarea label {
+    padding: 0px !important;
+}
+
+/* ----------------------------------------------------- */
+/* Divider */
+
+hr.rounded {
+    border-top: 3px solid var(--divider);
+    border-radius: 5px;
+}
+
+/* ----------------------------------------------------- */
+/* Generate Button */
+
+#generate-greentext {
+    width: 100%;
+    height: 75px;
+    font-family: 'JetBrains Mono', monospace;
+    border: 0;
+    line-height: 2.5;
+    padding: 0 20px;
+    font-size: 1em;
+    text-align: center;
+    color: #194b3f;
+    border: 0.5rem outset rgba(217, 161, 192, .7);
+    border-radius: 10px;
+}
+
+#generate-greentext:active {
+    box-shadow: inset -2px -2px 3px rgba(255, 255, 255, .6),
+        inset 2px 2px 3px rgba(65, 62, 62, 0.6);
+    background-color: rgba(168, 127, 150, 0.7);
+    border: 0.5rem outset rgba(156, 114, 137, 0.7);
+    ;
+}
+
+/* ----------------------------------------------------- */
+/* Result Image */
+
+#final-greentext {
+    width: auto;
+    margin: 1em;
+}
+
+#download-greentext {
+    width: 100%;
+    height: 75px;
+    font-family: 'JetBrains Mono', monospace;
+    border: 0;
+    line-height: 2.5;
+    padding: 0 20px;
+    font-size: 1em;
+    text-align: center;
+    color: #194b3f;
+    border: 0.5rem outset rgba(217, 161, 192, .7);
+    border-radius: 10px;
+}
+
+#download-greentext:active {
+    box-shadow: inset -2px -2px 3px rgba(255, 255, 255, .6),
+        inset 2px 2px 3px rgba(65, 62, 62, 0.6);
+    background-color: rgba(168, 127, 150, 0.7);
+    border: 0.5rem outset rgba(156, 114, 137, 0.7);
+    ;
+}
+
+/* column is vertical
+row is horizontal */
