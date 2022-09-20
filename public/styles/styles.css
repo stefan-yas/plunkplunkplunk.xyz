@@ -102,7 +102,6 @@ p {
     text-align: center;
     color: #194b3f;
     border: 0.5rem outset rgba(217, 161, 192, .7);
-    ;
     border-radius: 10px;
 }
 
@@ -110,7 +109,6 @@ p {
     box-shadow: inset -2px -2px 3px rgba(255, 255, 255, .6),
         inset 2px 2px 3px rgba(65, 62, 62, 0.6);
     background-color: rgba(168, 127, 150, 0.7);
-
     border: 0.5rem outset rgba(156, 114, 137, 0.7);
     ;
 }
