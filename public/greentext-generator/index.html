@@ -5,6 +5,7 @@
     <title>greentext generator | plunk plunk plunk</title>
     <meta charset="UTF-8" />
     <link rel="stylesheet" href="/styles/styles.css" />
+    <link rel="stylesheet" href="/styles/greentext-generator-styles.css" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta property="og:title" content="greentext generator | plunk plunk plunk" />
     <meta property="og:image" content="" />
@@ -35,7 +36,43 @@
         <h2>create, style and share your newest greentext</h2>
 
         <div class="main-container">
-            <div class="input-container">
+
+            <!-- Date & Style Toggles -->
+
+            <div class="toggle-container">
+                <p>Date</p>
+                <div class="toggle">
+                    <label class="switch">
+                        <input id="anonymous" type="checkbox" checked>
+                        <span class="slider round"></span>
+                    </label>
+                </div>
+                <p>Style</p>
+                <div class="toggle">
+                    <label class="switch">
+                        <input id="greentext-style" type="checkbox" checked>
+                        <span class="slider round"></span>
+                    </label>
+                </div>
+            </div>
+
+            <!-- Preview -->
+
+            <div id="preview-container">
+                <div id="anonymous-date"><span id="anonymous-text">Anonymous</span><span id="greentext-date"></span> </div>
+                <div id="preview-image-and-text">
+                    <div id="preview-image"></div>
+                    <div id="preview-text" contentEditable=true data-text=">be me"></div>
+                </div>
+            </div>
+
+
+
+
+
+
+
+            <!-- <div class="input-container">
                 <button id="generate" type="button" onclick="reGen()">
                     Generate
                 </button>
@@ -50,7 +87,7 @@
                     </button>
                 </div>
             </div>
-        </div>
+        </div> -->
 
     </main>
 
