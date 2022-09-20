@@ -31,9 +31,9 @@
     flex-direction: column;
     gap: 1em;
     background-color: var(--main-background);
-    margin: 1em;
     padding-left: 14px;
     padding-right: 14px;
+    padding-bottom: 1em;
 }
 
 /* Toggles */
@@ -148,6 +148,7 @@ input:checked+.slider:before {
 }
 
 #anonymous-text {
+    padding-left: 20px;
     color: var(--new-style-anonymous-text);
     font-weight: 600;
 }
@@ -165,17 +166,21 @@ input:checked+.slider:before {
 
 #preview-image {
     float: left;
-    width: 40%;
+    width: 250px;
 }
 
 #preview-image img {
-    max-width: 45%;
+    max-width: 100%;
+    max-height: 100%;
     margin: 5%;
 }
 
 #preview-text {
+    line-height: 1.6;
+    padding-left: 35px;
+    padding-right: 15px;
+    padding-top: 3px;
     float: none;
-    margin: 5%;
 }
 
 /* ----------------------------------------------------- */
@@ -229,6 +234,7 @@ input:checked+.slider:before {
 }
 
 #styling-buttons {
+    max-width: 30%;
     display: flex;
     flex-direction: column;
     gap: 1em;
@@ -244,13 +250,14 @@ input:checked+.slider:before {
     padding: 0 20px;
     font-size: 1em;
     text-align: center;
+    white-space: nowrap;
     color: #194b3f;
     border: 0.5rem outset rgba(217, 161, 192, .7);
     border-radius: 10px;
     background-color: rgba(217, 161, 192, .7);
 }
 
-#normal-text,
+#normal-text:active,
 #quote-text:active {
     box-shadow: inset -2px -2px 3px rgba(255, 255, 255, .6),
         inset 2px 2px 3px rgba(65, 62, 62, 0.6);
@@ -260,8 +267,13 @@ input:checked+.slider:before {
 }
 
 #greentext-input-container textarea {
-    width: auto;
-    height: auto;
+    height: 100%;
+    width: 100%;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    font-family: 'JetBrains Mono', monospace !important;
+    font-size: 17px !important;
 }
 
 #textarea {
@@ -270,12 +282,7 @@ input:checked+.slider:before {
     flex-direction: column;
     gap: 0.5em;
     align-items: flex-start;
-    justify-content: center;
-    /* font-family: 'JetBrains Mono', monospace !important;
-    font-size: 20px !important; */
-    font-family: Verdana, Arial, Helvetica, sans-serif !important;
-    font-size: 20px !important;
-
+    justify-content: space-evenly;
 }
 
 #textarea label {
@@ -286,6 +293,7 @@ input:checked+.slider:before {
 /* Divider */
 
 hr.rounded {
+    width: 70%;
     border-top: 3px solid var(--divider);
     border-radius: 5px;
 }
@@ -323,6 +331,11 @@ hr.rounded {
     margin: 1em;
 }
 
+#final-greentext img {
+    max-width: 100%;
+    max-height: 100%;
+}
+
 #download-greentext {
     width: 100%;
     height: 75px;
@@ -344,6 +357,3 @@ hr.rounded {
     border: 0.5rem outset rgba(156, 114, 137, 0.7);
     ;
 }
-
-/* column is vertical
-row is horizontal */
