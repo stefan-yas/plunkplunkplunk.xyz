@@ -317,7 +317,7 @@ input:checked+.slider:before {
 /* ----------------------------------------------------- */
 /* Anonymous, Flag, Date & Image size hover effects */
 
-.disclaimer:hover, #anonymous-flag-container:hover, #timestamp-and-id:hover {
+#preview-image:hover, #anonymous-flag-container:hover, #timestamp-and-id:hover {
     background-color: tan;
     cursor: pointer;
 }
