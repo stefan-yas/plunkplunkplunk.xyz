@@ -3,7 +3,7 @@ window.onload = () => {
     randomizeImageSize();
     randomID();
     randomFlag();
-    //randomImg();
+    randomImg();
     timestamp();
     goToPreview();
     goToEdit();
@@ -145,14 +145,6 @@ function drawImageOutput() {
         });
     }
 
-    // Convert to canvas
-    /*html2canvas(document.getElementById("preview-image-and-text")).then(function(canvas) {
-        document.getElementById("final-greentext").appendChild(canvas); // create canvas using a library
-        canvas.setAttribute("id", "outputCanvas"); // set id to canvas
-
-        scrollDown();
-    });*/
-
     html2canvas(document.getElementById("preview-container"), {
         /*allowTaint: true*/
         useCORS: true
@@ -166,10 +158,11 @@ function drawImageOutput() {
 
 function downloadFinalImage() {
     const link = document.createElement("a"); // virtual link for download
-    link.download = "greentext.png"; // default name for the image
+    link.download = "greentext.jpeg"; // default name for the image
 
+    let imgCompression = 0.1;
 
-    link.href = document.getElementById("outputCanvas").toDataURL("image/png"); // convert canvas to image
+    link.href = document.getElementById("outputCanvas").toDataURL("image/jpeg", imgCompression); // convert canvas to image
     link.click(); // click the virtual link, which opens the download interface
 }
 
@@ -221,7 +214,6 @@ function toggleImage() {
             imageInputLabel.classList.add("disabled");
         }
 
-        randomizeImageSize();
     });
 }
 
@@ -323,32 +315,6 @@ function randomFlag() {
     htmlFlagOutput.src = url; // set src to element
 }
 
-function randomImg() {
-    const imgElement = document.getElementById("preview-image-file");
-    let url = "https://picsum.photos/id/";
-    let imgHeight = 200;
-    let imgWidth = 200;
-
-    const randomizeImgDimensions = Math.round(getRandomNumber(0, 3)); // increasing the second number will decrease the odds of dimensions being randomized
-
-    // 50% chance to randomize either height or width
-    if (randomizeImgDimensions === 0) {
-        console.log("height");
-        imgHeight = Math.round(getRandomNumber(100, 200))
-    } else if (randomizeImgDimensions === 1) {
-        console.log("width");
-        imgWidth = Math.round(getRandomNumber(100, 200))
-    } else {
-        console.log("no random");
-    }
-
-    const imgID = Math.round(getRandomNumber(0, 1084)); // get random img id (1084 is max)
-
-    url = url + imgID + "/" + imgWidth + "/" + imgHeight
-    imgElement.src = url; // set src to element
-}
-
-
 function refreshRandom() {
 
     const flag = document.getElementById("anonymous-flag-container");
@@ -362,10 +328,10 @@ function refreshRandom() {
         randomID();
         timestamp();
     });
-    img.addEventListener("click", function () {
+    /*img.addEventListener("click", function () {
         randomizeImageSize();
         randomImg();
-    });
+    });*/
 }
 
 function scrollToElement(target, block) {
