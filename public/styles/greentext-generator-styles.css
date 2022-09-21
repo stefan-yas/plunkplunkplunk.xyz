@@ -21,6 +21,7 @@
     /* Toggles */
     --toggle-background: #E4BCD2;
     --toggle-slider: #2d3319;
+    --toggle-off-position-background: #647138;
 
     /* Divider */
     --divider: #194b3f;
@@ -70,7 +71,7 @@ button:active {
     gap: 20px;
     align-items: flex-end;
     justify-content: flex-end;
-    /* margin: 1em; */
+    padding-top: 1em;
 }
 
 .toggle-container p {
@@ -118,17 +119,17 @@ button:active {
     width: 26px;
     left: 4px;
     bottom: 4px;
-    background-color: var(--toggle-slider);
+    background-color: var(--toggle-off-position-background);
     -webkit-transition: .4s;
     transition: .4s;
 }
 
 input:checked+.slider {
-    background-color: var(--toggle-background);
+    background-color: var(--toggle-slider);
 }
 
 input:focus+.slider {
-    box-shadow: 0 0 1px var(--toggle-background);
+    box-shadow: 0 0 1px var(--toggle-slider);
 }
 
 input:checked+.slider:before {
