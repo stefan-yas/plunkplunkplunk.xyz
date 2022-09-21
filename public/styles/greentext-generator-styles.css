@@ -518,7 +518,7 @@ hr.rounded {
 }
 
 .button-up:hover {
-    transform: translate3d(0, 10px, 0);
+    transform: translate3d(0, -10px, 0);
 }
 
 .button-up::after {
