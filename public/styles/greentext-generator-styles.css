@@ -51,6 +51,11 @@ button:active {
     ;
 }
 
+.greentext-h3 {
+    background: none;
+    text-align: center;
+}
+
 /* -------- */
 
 .greentext-main {
@@ -61,6 +66,12 @@ button:active {
     padding-left: 14px;
     padding-right: 14px;
     padding-bottom: 1em;
+    margin-left: 15px;
+    margin-right: 15px;
+}
+
+.preview-box {
+    outline: 3px dashed var(--new-style-anonymous-text);
 }
 
 /* Toggles */
@@ -68,10 +79,8 @@ button:active {
 .toggle-container {
     display: flex;
     flex-direction: row;
-    gap: 40px;
-    align-items: flex-end;
-    justify-content: flex-end;
-    padding-top: 1em;
+    justify-content: space-between;
+    outline: 1px dashed var(--new-style-anonymous-text);
 }
 
 .toggle-container p {
@@ -91,7 +100,7 @@ button:active {
 
 .toggle:hover {
     box-shadow: 0px 0px 0px 0px var(--divider);
-    outline: dotted var(--divider);
+    outline: solid var(--divider);
     outline-width: 0px;
     animation-name: outline;
     animation-duration: 0.3s;
@@ -195,7 +204,6 @@ input:checked+.slider:before {
     align-items: stretch;
     justify-content: center;
     font-family: Arial, Helvetica Neue, Helvetica, sans-serif;
-    outline: 1px dashed var(--new-style-anonymous-text);
 }
 
 .quoted,
@@ -225,6 +233,15 @@ input:checked+.slider:before {
     background-color: var(--new-style-anonymous-background);
 }
 
+#anonymous-date-box > div {
+    display: flex;
+    align-items: center;
+}
+
+#random-flag {
+    padding-left: 15px;
+}
+
 #anonymous-text {
     padding-left: 20px;
     color: var(--new-style-anonymous-text);
@@ -235,7 +252,8 @@ input:checked+.slider:before {
     padding-right: 20px;
 }
 
-#greentext-date, #greentext-random-id {
+#greentext-date,
+#greentext-random-id {
     color: var(--new-style-normal-text);
 }
 
@@ -279,10 +297,11 @@ input:checked+.slider:before {
 #preview-text {
     white-space: pre-wrap;
     word-break: break-all;
-    line-height: 1.6;
+    line-height: 1;
     padding-left: 20px;
     padding-right: 15px;
     padding-top: 9px;
+    padding-bottom: 9px;
     float: none;
 }
 
@@ -297,7 +316,7 @@ input:checked+.slider:before {
     justify-content: center;
     margin-top: 1em;
     margin-bottom: 1em;
-    outline: 1px dashed var(--new-style-anonymous-text);
+    outline: 3px dashed var(--new-style-anonymous-text);
 }
 
 #image-settings p {
@@ -310,8 +329,40 @@ input:checked+.slider:before {
     width: auto;
 }
 
-#image-settings .small-divider {
-    font-size: 30px;
+.clover {
+    line-height: 1;
+}
+
+.clover a {
+    display: block;
+    white-space: unset;
+    padding: 15px;
+}
+
+.clover img {
+    width: 30px;
+    height: 30px;
+}
+
+.clover img:hover {
+    animation-name: clover;
+    animation-duration: 3s;
+    animation-timing-function: ease-in-out;
+    -webkit-animation-fill-mode: forwards;
+    -moz-animation-fill-mode: forwards;
+    -ms-animation-fill-mode: forwards;
+    -o-animation-fill-mode: forwards;
+    animation-fill-mode: forwards;
+}
+
+@keyframes clover {
+    from {
+        transform: rotate(0);
+    }
+
+    to {
+        transform: rotate(360deg);
+    }
 }
 
 /* ----------------------------------------------------- */
@@ -325,20 +376,21 @@ input:checked+.slider:before {
     justify-content: center;
     margin-top: 1em;
     margin-bottom: 1em;
-    outline: 1px dashed var(--new-style-anonymous-text);
+    outline: 3px dashed var(--new-style-anonymous-text);
 }
 
 #styling-buttons {
+    width: 100%;
     display: flex;
     flex-direction: row;
-    gap: 2em;
-    justify-content: center;
-    margin: 0.5em;
+    justify-content: space-between;
+    outline: 1px dashed var(--new-style-anonymous-text);
 }
 
 #normal-text,
 #quote-text {
     white-space: nowrap;
+    line-height: 2;
 }
 
 #greentext-input-container textarea {
@@ -350,6 +402,7 @@ input:checked+.slider:before {
     font-family: 'JetBrains Mono', monospace !important;
     font-size: 17px !important;
     border: 2px dashed rgba(226, 133, 184, 0.7);
+    padding: 15px;
 }
 
 #textarea {
@@ -359,6 +412,7 @@ input:checked+.slider:before {
     gap: 0.5em;
     align-items: center;
     justify-content: space-evenly;
+    z-index: 9999;
 }
 
 #textarea label {
@@ -387,7 +441,6 @@ hr.rounded {
 
 #final-greentext {
     width: auto;
-    /*margin: 1em;*/
 }
 
 #final-greentext img {

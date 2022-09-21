@@ -39,47 +39,65 @@
 
     <main class="greentext-main">
 
-        <!-- Date & Style Toggles -->
+        <!-- User Input -->
 
-        <div class="toggle-container">
-
-            <div class="toggle">
-                <p>Date</p>
-                <label class="switch">
-                    <input id="anonymous" type="checkbox" checked>
-                    <span class="slider round"></span>
-                </label>
+        <div id="greentext-input-container">
+            <div id="textarea">
+                <label for="greentext-user-text"><h3 class="greentext-h3">Type out your greentext here</h3></label>
+                <div id="styling-buttons">
+                    <button id="normal-text" onclick="makeNormalText();">Normal Text</button>
+                    <button id="quote-text" onclick="makeQuotedText();">Quote Text</button>
+                </div>
+                <textarea id="greentext-user-text" onchange="changePreview();" name="greentext-user-text"
+                    placeholder=">be me" rows="10" cols="75"></textarea>
             </div>
-
-            <!-- <span class="small-divider">•</span> -->
-
-            <div class="toggle">
-                <p>Style</p>
-                <label class="switch">
-                    <input id="greentext-style" type="checkbox" checked>
-                    <span class="slider round"></span>
-                </label>
-            </div>
-
         </div>
 
-        <!-- Preview -->
+        <!-- Date & Style Toggles -->
 
-        <div id="preview-container" class="new-style">
-            <div id="anonymous-date-box">
-                <span id="anonymous-text">Anonymous</span>
-                <div class="timestamp-and-id">
-                    <span id="greentext-date">05/24/22(Tue)12:39:26</span>
-                    <span id="greentext-random-id">No.165199250</span>
+        <div class="preview-box">
+
+            <h3 class="greentext-h3">Preview</h3>
+
+            <div class="toggle-container">
+
+                <div class="toggle">
+                    <p>Date</p>
+                    <label class="switch">
+                        <input id="anonymous" type="checkbox" checked>
+                        <span class="slider round"></span>
+                    </label>
                 </div>
+
+                <div class="toggle">
+                    <p>Style</p>
+                    <label class="switch">
+                        <input id="greentext-style" type="checkbox" checked>
+                        <span class="slider round"></span>
+                    </label>
+                </div>
+
             </div>
 
-            <div id="preview-image-and-text">
-                <div id="preview-image">
-                    <img id="preview-image-file" src="https://i.pinimg.com/736x/ab/f4/e3/abf4e3963a4d4b76fc574e53baff8194.jpg">
-                    <p class="disclaimer"><span id="random-kb-number"></span> KB PNG</p>
+            <!-- Preview -->
+
+            <div id="preview-container" class="new-style">
+                <div id="anonymous-date-box">
+                    <div><span id="anonymous-text">⋮ Anonymous</span><img height="20px" id="random-flag" src=""></span></div>
+                    <div class="timestamp-and-id">
+                        <span id="greentext-date">05/24/22(Tue)12:39:26</span>
+                        <span id="greentext-random-id">No.165199250</span>
+                    </div>
                 </div>
-                <pre id="preview-text"></pre>
+
+                <div id="preview-image-and-text">
+                    <div id="preview-image">
+                        <img id="preview-image-file"
+                            src="https://picsum.photos/200">
+                        <p class="disclaimer"><span id="random-kb-number"></span> KB PNG</p>
+                    </div>
+                    <pre id="preview-text"></pre>
+                </div>
             </div>
         </div>
 
@@ -92,28 +110,18 @@
                 </label>
             </div>
 
-            <span class="small-divider">•</span>
+            <div class="clover">
+                <a href="https://old.reddit.com/r/AskReddit/comments/3gj8kv/what_is_the_funniest_thing_youve_have_seen_on/"
+                    target="_blank">
+                    <img id="lucky-clover" src="../img/lucky-clover.svg" />
+                </a>
+
+            </div>
 
             <div class="image-picker">
-                <!-- <button id="upload-image">Upload Image</button> -->
                 <label for="upload-image">Choose Image</label>
                 <input id="upload-image" onchange="uploadImage();" type="file" accept="image/jpeg, image/jpg, image/png"
                     hidden>
-            </div>
-        </div>
-
-        <!-- <hr class="rounded"> -->
-
-        <div id="greentext-input-container">
-            <div id="styling-buttons">
-                <button id="normal-text" onclick="makeNormalText();">Normal Text</button>
-                <button id="quote-text" onclick="makeQuotedText();">Quote Text</button>
-            </div>
-
-            <div id="textarea">
-                <label for="greentext-user-text"><b>Type out your greentext here:</b></label>
-                <textarea id="greentext-user-text" onchange="changePreview();" name="greentext-user-text"
-                    placeholder=">be me" rows="10" cols="75"></textarea>
             </div>
         </div>
 
