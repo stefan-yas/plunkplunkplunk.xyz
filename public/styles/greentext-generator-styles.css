@@ -226,6 +226,16 @@ input:checked+.slider:before {
     padding-left: 5px;
 }
 
+/* Old style: */
+.old-style #anonymous-date-box {
+    background-color: red;
+    /* Just add .old-style in front of the selector and add whatever changes need to be to make it old style*/
+}
+
+.old-style #preview-image-and-text {
+    background-color: darkcyan;
+}
+
 /* ----------------------------------------------------- */
 /* Image and Text Box */
 

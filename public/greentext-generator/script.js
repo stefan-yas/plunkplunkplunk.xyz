@@ -5,12 +5,12 @@ window.onload = () => {
     randomFlag();
     //randomImg();
     timestamp();
+    goToPreview();
     toggleImage();
     toggleHeader();
-    autoUpdate();
     toggleStyle();
     refreshRandom();
-    goToPreview();
+    autoUpdate();
 };
 
 let typeOfChange = "quoted";
