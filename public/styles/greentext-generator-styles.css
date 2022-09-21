@@ -28,7 +28,7 @@
 
 /* General */
 
-button, #upload-image {
+button, .image-picker label {
     font-family: 'JetBrains Mono', monospace;
     border: 0;
     line-height: 2.9;
@@ -41,7 +41,7 @@ button, #upload-image {
     background-color: rgba(217, 161, 192, .7);
 }
 
-button:active, #upload-image:active {
+button:active {
     box-shadow: inset -2px -2px 3px rgba(255, 255, 255, .6),
         inset 2px 2px 3px rgba(65, 62, 62, 0.6);
     background-color: rgba(170, 124, 149, 0.7);
@@ -155,17 +155,18 @@ input:checked+.slider:before {
     flex-direction: column;
     gap: 0;
     /* align-items: center; */
-    align-items: stretch; /* I replaced the above with this - Eva*/
+    align-items: stretch;
+    /* I replaced the above with this - Eva*/
     justify-content: center;
     font-family: Arial, Helvetica Neue, Helvetica, sans-serif;
 }
 
 .quoted {
-	color: red;
+    color: red;
 }
 
 .normal {
-	color: blue;
+    color: blue;
 }
 
 /* ----------------------------------------------------- */
@@ -239,6 +240,17 @@ input:checked+.slider:before {
 #upload-image {
     width: auto;
 }
+
+#image-settings .small-divider {
+    font-size: 30px;
+}
+
+/* .image-picker label {
+    display: inline-block;
+    outline: solid var(--toggle-slider);
+    outline-style: groove;
+    border-radius: 12px;
+} */
 
 /* ----------------------------------------------------- */
 /* Greentext User Input */

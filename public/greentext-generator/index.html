@@ -18,7 +18,7 @@
     <link rel="icon" type=”image/svg+xml” href="../img/favicon.svg" />
     <link rel="canonical" href="https://plunkplunkplunk.xyz/plunk/greentext-generator" />
     <script defer type="text/javascript" src="https://html2canvas.hertzen.com/dist/html2canvas.min.js"></script>
-	<script type="text/javascript" src="./script.js"></script>
+    <script type="text/javascript" src="./script.js"></script>
 
 </head>
 
@@ -28,7 +28,8 @@
         <div class="logo">
             <a href="https://plunkplunkplunk.xyz"><img class="desktop" src="../img/title.svg" alt="title"></a>
 
-            <a href="https://plunkplunkplunk.xyz"><img class="mobile" src="../img/logo-mobile.svg" alt="title"></a></div>
+            <a href="https://plunkplunkplunk.xyz"><img class="mobile" src="../img/logo-mobile.svg" alt="title"></a>
+        </div>
 
         <h1>greentext generator</h1>
 
@@ -72,7 +73,7 @@
             </div>
 
             <div id="preview-image-and-text">
-                <div id="preview-image"><img
+                <div id="preview-image"><img id="preview-image-file"
                         src="https://i.pinimg.com/736x/ab/f4/e3/abf4e3963a4d4b76fc574e53baff8194.jpg"></div>
                 <pre id="preview-text"></pre>
             </div>
@@ -86,8 +87,15 @@
                     <span class="slider round"></span>
                 </label>
             </div>
-            <!-- <button id="upload-image">Upload Image</button> -->
-            <input id="upload-image" oninput="uploadImage();" type="file" accept="image/jpeg, image/jpg, image/png">
+
+            <span class="small-divider">•</span>
+
+            <div class="image-picker">
+                <!-- <button id="upload-image">Upload Image</button> -->
+                <label for="upload-image">Choose Image</label>
+                <input id="upload-image" onchange="uploadImage();" type="file" accept="image/jpeg, image/jpg, image/png"
+                    hidden>
+            </div>
         </div>
 
         <hr class="rounded">
@@ -100,8 +108,8 @@
 
             <div id="textarea">
                 <label for="greentext-user-text">Type out your greentext here:</label>
-                <textarea id="greentext-user-text" onchange="changePreview();" name="greentext-user-text" placeholder=">be me" rows="7"
-                    cols="75"></textarea>
+                <textarea id="greentext-user-text" onchange="changePreview();" name="greentext-user-text"
+                    placeholder=">be me" rows="7" cols="75"></textarea>
             </div>
         </div>
 
