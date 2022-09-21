@@ -222,12 +222,22 @@ input:checked+.slider:before {
 }
 
 #random-flag {
-    animation-name: inout;
+    animation-name: grow;
     animation-duration: 1s;
     animation-timing-function: linear;
     animation-delay: 0s;
     animation-iteration-count: infinite;
     animation-direction: alternate;
+}
+
+@keyframes grow {
+    from {
+        transform: scale(1);
+    }
+
+    to {
+        transform: scale(1.2);
+    }
 }
 
 #timestamp-and-id {
