@@ -3,6 +3,7 @@ window.onload = () => {
     randomizeImageSize();
     randomID();
     randomFlag();
+    randomImg();
     timestamp();
     toggleImage();
     toggleHeader();
@@ -289,13 +290,13 @@ function randomImg() {
     let imgHeight = 200;
     let imgWidth = 200;
 
-    const randomizeImgDimesions = Math.round(getRandomNumber(0,3)); // increasing the second number will decrease the odds of dimensions being randomized
+    const randomizeImgDimensions = Math.round(getRandomNumber(0,3)); // increasing the second number will decrease the odds of dimensions being randomized
 
-    // 50% chance to ranomize either height or width
-    if (randomizeImgDimesions === 0) {
+    // 50% chance to randomize either height or width
+    if (randomizeImgDimensions === 0) {
         console.log("height");
         imgHeight = Math.round(getRandomNumber(100,200))
-    } else if (randomizeImgDimesions === 1) {
+    } else if (randomizeImgDimensions === 1) {
         console.log("width");
         imgWidth = Math.round(getRandomNumber(100,200))
     } else {

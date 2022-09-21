@@ -312,10 +312,11 @@ input:checked+.slider:before {
 }
 
 .image-picker .disabled {
-    background-color: #bdbdbd;
-    border-color: #f3f3f3;
-    color: #939393;
+    background-color: #d9a1c0b3;
+    border-color: #d9a1c0b3;
+    color: #7e8084;
     cursor: auto;
+    border-style: solid;
 }
 
 .clover {
