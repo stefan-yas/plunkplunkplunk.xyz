@@ -180,12 +180,19 @@ function randomizeImageSize() {
 function toggleImage() {
     const checkbox = document.getElementById("image-toggle");
     const image = document.getElementById("preview-image");
+    const imageInput = document.getElementById("upload-image");
+    const imageInputLabel = document.getElementById("image-picker-label");
+    
 
     checkbox.addEventListener("change", function () {
         if (this.checked) {
             image.style.display = "flex";
+            imageInput.disabled = false;
+            imageInputLabel.classList.remove("disabled");
         } else {
             image.style.display = "none";
+            imageInput.disabled = true;
+            imageInputLabel.classList.add("disabled");
         }
 
         randomizeImageSize();
