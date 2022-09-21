@@ -3,7 +3,7 @@ window.onload = () => {
     randomizeImageSize();
     randomID();
     randomFlag();
-    randomImg();
+    //randomImg();
     timestamp();
     toggleImage();
     toggleHeader();
@@ -178,6 +178,32 @@ function randomizeImageSize() {
     element.textContent = size;
 }
 
+function randomImg() {
+    const imgElement = document.getElementById("preview-image-file");
+    let url = "https://picsum.photos/id/";
+    let imgHeight = 200;
+    let imgWidth = 200;
+
+    const randomizeImgDimensions = Math.round(getRandomNumber(0,3)); // increasing the second number will decrease the odds of dimensions being randomized
+
+    // 50% chance to randomize either height or width
+    if (randomizeImgDimensions === 0) {
+        imgHeight = Math.round(getRandomNumber(100,200))
+    } else if (randomizeImgDimensions === 1) {
+        imgWidth = Math.round(getRandomNumber(100,200))
+    }
+
+    const maxID = 1084;
+    const getRandomID = (max) => Math.round(getRandomNumber(0,max));
+    console.log("boop");
+    let imgID = getRandomID(maxID); // get random img id (1084 is max)
+
+    url = url + imgID + "/" + imgWidth + "/" + imgHeight; // construct url
+    console.log(url);
+    imgElement.src = url; // set src to element
+    // in the event that the image url isn't valid, onerror in the html restarts this script
+}
+
 function toggleImage() {
     const checkbox = document.getElementById("image-toggle");
     const image = document.getElementById("preview-image");
@@ -219,6 +245,7 @@ function randomID() {
     const element = document.getElementById("greentext-random-id");
     const size = Math.round(getRandomNumber(100000000, 999999999));
     element.textContent = "No." + size;
+    console.log("random id");
 }
 
 function timestamp() {
@@ -256,6 +283,19 @@ function toggleHeader() {
 
         randomID();
         timestamp();
+    });
+}
+
+function toggleFlag() {
+    const checkbox = document.getElementById("flag-toggle");
+    const flag = document.getElementById("random-flag");
+
+    checkbox.addEventListener("change", function () {
+        if (this.checked) {
+            flag.style.display = "inherit";
+        } else {
+            flag.style.display = "none";
+        }
     });
 }
 
