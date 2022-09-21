@@ -1,7 +1,9 @@
 window.onload = () => {
     console.log("initialize");
     toggleImage();
+    toggleHeader();
     autoUpdate();
+    toggleStyle();
 };
 
 let typeOfChange = "quoted";
@@ -182,3 +184,29 @@ function uploadImage() {
       reader.readAsDataURL(file);
     }
   }
+
+function toggleHeader() {
+    const checkbox = document.getElementById("anonymous");
+    const header = document.getElementById("anonymous-date-box");
+    
+    checkbox.addEventListener("change", function() {
+        if (this.checked) {
+            header.style.display = "flex";
+        } else {
+            header.style.display = "none";
+        }
+    });
+}
+
+function toggleStyle() {
+    const checkbox = document.getElementById("greentext-style");
+    const container = document.getElementById("preview-container");
+    
+    checkbox.addEventListener("change", function() {
+        if (this.checked) {
+            container.className = "new-style";
+        } else {
+            container.className = "old-style";
+        }
+    });
+}
