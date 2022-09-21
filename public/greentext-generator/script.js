@@ -322,6 +322,31 @@ function randomFlag() {
     htmlFlagOutput.src = url; // set src to element
 }
 
+function randomImg() {
+    const imgElement = document.getElementById("preview-image-file");
+    let url = "https://picsum.photos/id/";
+    let imgHeight = 200;
+    let imgWidth = 200;
+
+    const randomizeImgDimensions = Math.round(getRandomNumber(0, 3)); // increasing the second number will decrease the odds of dimensions being randomized
+
+    // 50% chance to randomize either height or width
+    if (randomizeImgDimensions === 0) {
+        console.log("height");
+        imgHeight = Math.round(getRandomNumber(100, 200))
+    } else if (randomizeImgDimensions === 1) {
+        console.log("width");
+        imgWidth = Math.round(getRandomNumber(100, 200))
+    } else {
+        console.log("no random");
+    }
+
+    const imgID = Math.round(getRandomNumber(0, 1084)); // get random img id (1084 is max)
+
+    url = url + imgID + "/" + imgWidth + "/" + imgHeight
+    imgElement.src = url; // set src to element
+}
+
 
 function refreshRandom() {
 
@@ -329,7 +354,9 @@ function refreshRandom() {
     const idAndDate = document.getElementById("timestamp-and-id");
     const img = document.getElementById("preview-image");
 
-    flag.addEventListener("click", function () { randomFlag(); });
+    flag.addEventListener("click", function () {
+        randomFlag();
+    });
     idAndDate.addEventListener("click", function () {
         randomID();
         timestamp();

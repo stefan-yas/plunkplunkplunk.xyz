@@ -84,13 +84,11 @@ button:active {
 .toggle-container {
     display: flex;
     flex-direction: row;
-    justify-content: space-between;
-    outline: 1px dashed var(--new-style-anonymous-text);
+    justify-content: space-around;
 }
 
 .toggle-container p {
     background: none;
-    margin: 0px !important;
     padding: 0px !important;
 }
 
@@ -214,7 +212,6 @@ input:checked+.slider:before {
 }
 
 #anonymous-text {
-    /*padding-left: 20px;*/
     color: var(--new-style-anonymous-text);
     font-weight: 600;
 }
@@ -294,7 +291,7 @@ input:checked+.slider:before {
 #image-settings {
     display: flex;
     flex-direction: row;
-    gap: 50px;
+    gap: 5.5em;
     align-items: center;
     justify-content: space-around;
     margin-top: 1em;
