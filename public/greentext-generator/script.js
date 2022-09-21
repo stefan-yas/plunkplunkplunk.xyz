@@ -71,7 +71,7 @@ function changePreview() {
         // Check each line if it starts with > or not
         if (el.startsWith(">")) {
             // If yes, it means the line is quoted
-            el = el.substring(1); // remove >
+            //el = el.substring(1); // remove >
             el = `<span class="quoted">` + el + `</span>` // apply class
 
         } else {
@@ -168,3 +168,17 @@ function toggleImage() {
 }
 
 
+
+function uploadImage() {
+    const preview = document.getElementById("preview-image-file");
+    const file = document.getElementById("upload-image").files[0];
+    const reader = new FileReader();
+  
+    reader.addEventListener("load", () => {
+      preview.src = reader.result; // convert image file to base64 string
+    }, false);
+  
+    if (file) {
+      reader.readAsDataURL(file);
+    }
+  }
