@@ -222,6 +222,34 @@ input:checked+.slider:before {
 }
 
 #random-flag {
+    animation-name: inout;
+    animation-duration: 1s;
+    animation-timing-function: linear;
+    animation-delay: 0s;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+}
+
+#timestamp-and-id {
+    animation-name: inout;
+    animation-duration: 1s;
+    animation-timing-function: linear;
+    animation-delay: 0s;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+}
+
+@keyframes inout {
+    from {
+        transform: scale(1);
+    }
+
+    to {
+        transform: scale(1.03);
+    }
+}
+
+#random-flag {
     padding-left: 15px;
 }
 
@@ -273,7 +301,6 @@ input:checked+.slider:before {
     float: left;
     width: 250px;
     margin-right: 20px;
-    padding-left: 20px;
     padding-top: 9px;
 }
 
@@ -309,8 +336,34 @@ input:checked+.slider:before {
 #preview-image:hover,
 #anonymous-flag-container:hover,
 #timestamp-and-id:hover {
-    background-color: tan;
     cursor: pointer;
+}
+
+.tooltip {
+    position: relative;
+    display: inline-block;
+    border-bottom: 1px dotted black;
+}
+
+.tooltip .tooltiptext {
+    opacity: 90%;
+    font-family: 'JetBrains Mono', monospace;
+    visibility: hidden;
+    width: 12vw;
+    background-color: var(--toggle-slider);
+    color: var(--new-style-anonymous-background);
+    text-align: center;
+    border-radius: 6px;
+    padding: 5px 0;
+    position: absolute;
+    z-index: 1;
+    bottom: 100%;
+    left: 50%;
+    margin-left: -115px;
+}
+
+.tooltip:hover .tooltiptext {
+    visibility: visible;
 }
 
 /* ----------------------------------------------------- */
