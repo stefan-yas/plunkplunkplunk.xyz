@@ -8,6 +8,7 @@ window.onload = () => {
     toggleHeader();
     autoUpdate();
     toggleStyle();
+    refreshRandom();
 };
 
 let typeOfChange = "quoted";
@@ -265,23 +266,28 @@ function toggleStyle() {
 }
 
 function randomFlag() {
+
     const htmlFlagOutput = document.getElementById("random-flag");
-
     let url = "https://flagcdn.com/";
+    const countryNumber = Math.round(getRandomNumber(0, countries.length - 1)); // random number between 0 and legth of array - 1, round it to whole number
+    let countryCode = countries[countryNumber].code; // get country code that matches the randomly generated index  above
 
-    let countryNumber = Math.round(getRandomNumber(0, countries.length - 1))
+    countryCode = countryCode.toLowerCase(); // lower case because url requires it
+    url = url + countryCode + ".svg"; // construct url
+    htmlFlagOutput.src = url; // set src to element
+}
 
-    console.log(countryNumber);
 
-    let countryCode = countries[countryNumber].code;
+function refreshRandom() {
 
-    countryCode = countryCode.toLowerCase();
+    const flag = document.getElementById("random-flag");
+    const idAndDate = document.getElementById("timestamp-and-id");
+    const imgSize = document.getElementById("preview-image-size");
 
-    console.log(countryCode);
-
-    url = url + countryCode + ".svg";
-
-    console.log(url);
-
-    htmlFlagOutput.src = url;
+    flag.addEventListener("click", function () { randomFlag(); });
+    idAndDate.addEventListener("click", function () {
+        randomID();
+        timestamp();
+    });
+    imgSize.addEventListener("click", function () { randomizeImageSize(); });
 }

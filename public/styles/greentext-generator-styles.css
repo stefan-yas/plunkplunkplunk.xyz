@@ -41,6 +41,7 @@ button,
     border: 0.5rem outset rgba(217, 161, 192, .7);
     border-radius: 10px;
     background-color: rgba(217, 161, 192, .7);
+    cursor: pointer;
 }
 
 button:active {
@@ -238,9 +239,10 @@ input:checked+.slider:before {
     background-color: var(--new-style-anonymous-background);
 }
 
-#anonymous-date-box>div {
+#anonymous-flag-container {
     display: flex;
     align-items: center;
+    padding: 0 20px;
 }
 
 #random-flag {
@@ -248,13 +250,13 @@ input:checked+.slider:before {
 }
 
 #anonymous-text {
-    padding-left: 20px;
+    /*padding-left: 20px;*/
     color: var(--new-style-anonymous-text);
     font-weight: 600;
 }
 
-.timestamp-and-id {
-    padding-right: 20px;
+#timestamp-and-id {
+    padding: 0 20px;
 }
 
 #greentext-date,
@@ -295,10 +297,11 @@ input:checked+.slider:before {
 .disclaimer {
     font-size: 17px;
     background: none;
-    padding: 0px !important;
-    margin: 0px !important;
+    padding: 0 20px;
+    margin: 0px;
     color: rgb(92, 92, 92);
 }
+
 
 #preview-text {
     white-space: pre-wrap;
@@ -309,6 +312,14 @@ input:checked+.slider:before {
     padding-top: 9px;
     padding-bottom: 9px;
     float: none;
+}
+
+/* ----------------------------------------------------- */
+/* Anonymous, Flag, Date & Image size hover effects */
+
+.disclaimer:hover, #anonymous-flag-container:hover, #timestamp-and-id:hover {
+    background-color: tan;
+    cursor: pointer;
 }
 
 /* ----------------------------------------------------- */
