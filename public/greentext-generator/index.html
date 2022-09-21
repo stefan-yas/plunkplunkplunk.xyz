@@ -44,42 +44,49 @@
 
         <div id="greentext-input-container">
             <div id="textarea">
-                <label for="greentext-user-text"><h3 class="greentext-h3">Type out your greentext here</h3></label>
+                <label for="greentext-user-text">
+                    <h3 class="greentext-h3">Type out your greentext here</h3>
+                </label>
                 <div id="styling-buttons">
                     <button id="normal-text" onclick="makeNormalText();">Normal Text</button>
+                    <div class="clover">
+                        <a href="https://old.reddit.com/r/AskReddit/comments/3gj8kv/what_is_the_funniest_thing_youve_have_seen_on/"
+                            target="_blank">
+                            <img id="lucky-clover" src="../img/lucky-clover.svg" />
+                        </a>
+                    </div>
                     <button id="quote-text" onclick="makeQuotedText();">Quote Text</button>
+
                 </div>
+
                 <textarea id="greentext-user-text" onchange="changePreview();" name="greentext-user-text"
                     placeholder=">be me" rows="10" cols="75"></textarea>
+            </div>
+
+            <!-- User Input For Image Settings -->
+
+            <div id="image-settings">
+                <div class="toggle">
+                    <p>Image On/Off</p>
+                    <label class="switch">
+                        <input id="image-toggle" type="checkbox" checked>
+                        <span class="slider round"></span>
+                    </label>
+                </div>
+
+                <p>•</p>
+
+                <div class="image-picker">
+                    <label id="image-picker-label" for="upload-image">Choose Image</label>
+                    <input id="upload-image" onchange="uploadImage();" type="file"
+                        accept="image/jpeg, image/jpg, image/png" hidden>
+                </div>
             </div>
         </div>
 
         <div class="button-down"></div>
 
-        <!-- User Input For Image Settings -->
 
-        <div id="image-settings">
-            <div class="toggle">
-                <p>Image On/Off</p>
-                <label class="switch">
-                    <input id="image-toggle" type="checkbox" checked>
-                    <span class="slider round"></span>
-                </label>
-            </div>
-
-            <div class="clover">
-                <a href="https://old.reddit.com/r/AskReddit/comments/3gj8kv/what_is_the_funniest_thing_youve_have_seen_on/"
-                    target="_blank">
-                    <img id="lucky-clover" src="../img/lucky-clover.svg" />
-                </a>
-            </div>
-
-            <div class="image-picker">
-                <label for="upload-image">Choose Image</label>
-                <input id="upload-image" onchange="uploadImage();" type="file" accept="image/jpeg, image/jpg, image/png"
-                    hidden>
-            </div>
-        </div>
 
         <div class="button-down"></div>
 
@@ -124,8 +131,7 @@
 
                 <div id="preview-image-and-text">
                     <div id="preview-image">
-                        <img id="preview-image-file"
-                            src="https://picsum.photos/200">
+                        <img id="preview-image-file" src="https://picsum.photos/200">
                         <p id="preview-image-size" class="disclaimer"><span id="random-kb-number"></span> KB PNG</p>
                     </div>
                     <pre id="preview-text"></pre>
