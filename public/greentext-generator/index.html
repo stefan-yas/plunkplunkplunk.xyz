@@ -103,6 +103,14 @@
                 </div>
 
                 <div class="toggle">
+                    <p>Flag</p>
+                    <label class="switch">
+                        <input id="flag-toggle" onclick="toggleFlag()" type="checkbox" checked>
+                        <span class="slider round"></span>
+                    </label>
+                </div>
+
+                <div class="toggle">
                     <p>Style</p>
                     <label class="switch">
                         <input id="greentext-style" type="checkbox" checked>
@@ -127,7 +135,7 @@
 
                 <div id="preview-image-and-text">
                     <div id="preview-image">
-                        <img id="preview-image-file" src="">
+                        <img id="preview-image-file" src="" onerror="randomImg();">
                         <p id="preview-image-size" class="disclaimer"><span id="random-kb-number"></span> KB PNG</p>
                     </div>
                     <pre id="preview-text"></pre>
