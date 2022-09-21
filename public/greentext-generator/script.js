@@ -6,6 +6,7 @@ window.onload = () => {
     //randomImg();
     timestamp();
     goToPreview();
+    goToEdit();
     toggleImage();
     toggleHeader();
     toggleStyle();
@@ -367,8 +368,8 @@ function refreshRandom() {
     });
 }
 
-function scrollToElement(target) {
-    target.scrollIntoView({behavior: "smooth", block: "start"});
+function scrollToElement(target, block) {
+    target.scrollIntoView({behavior: "smooth", block: block});
 }
 
 function goToPreview() {
@@ -376,6 +377,15 @@ function goToPreview() {
 
     button.addEventListener("click", function () {
         const target = document.getElementById("preview");
-        scrollToElement(target);
+        scrollToElement(target, "start");
+    });
+}
+
+function goToEdit() {
+    const button = document.getElementById("editbox");
+
+    button.addEventListener("click", function () {
+        const target = document.getElementById("greentext-input-container");
+        scrollToElement(target, "center");
     });
 }
