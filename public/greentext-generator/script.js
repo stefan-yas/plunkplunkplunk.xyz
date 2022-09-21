@@ -182,7 +182,6 @@ function toggleImage() {
     const image = document.getElementById("preview-image");
     const imageInput = document.getElementById("upload-image");
     const imageInputLabel = document.getElementById("image-picker-label");
-    
 
     checkbox.addEventListener("change", function () {
         if (this.checked) {
