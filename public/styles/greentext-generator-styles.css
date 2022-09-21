@@ -21,7 +21,7 @@
     /* Toggles */
     --toggle-background: #E4BCD2;
     --toggle-slider: #2d3319;
-    --toggle-off-position-background: #647138;
+    --toggle-off-position-background: transparent;
 
     /* Divider */
     --divider: #194b3f;
@@ -107,7 +107,7 @@ button:active {
     left: 0;
     right: 0;
     bottom: 0;
-    background-color: var(--toggle-background);
+    background-color: var(--toggle-off-position-background);
     -webkit-transition: .4s;
     transition: .4s;
 }
@@ -119,13 +119,13 @@ button:active {
     width: 26px;
     left: 4px;
     bottom: 4px;
-    background-color: var(--toggle-off-position-background);
+    background-color: var(--toggle-slider);
     -webkit-transition: .4s;
     transition: .4s;
 }
 
 input:checked+.slider {
-    background-color: var(--toggle-slider);
+    background-color: var(--toggle-background);
 }
 
 input:focus+.slider {
