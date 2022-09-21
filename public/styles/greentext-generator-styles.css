@@ -437,6 +437,7 @@ hr.rounded {
     display: none;
 }
 
+/* ----------------------------------------------------- */
 /* Arrows */
 
 .button-down {
@@ -450,6 +451,7 @@ hr.rounded {
     border-radius: 50%;
     transition: all 0.2s linear;
     box-shadow: 0px 0px 0px 5px var(--toggle-slider);
+    cursor: pointer;
 }
 
 .button-down:hover {
@@ -471,4 +473,39 @@ hr.rounded {
 .button-down::after {
     top: 10px;
     transform: rotate(225deg);
+}
+
+.button-up {
+    opacity: 80%;
+    position: relative;
+    padding: 5px;
+    margin: 1em auto;
+    background: var(--toggle-slider);
+    height: 30px;
+    width: 30px;
+    border-radius: 50%;
+    transition: all 0.2s linear;
+    box-shadow: 0px 0px 0px 5px var(--toggle-slider);
+    cursor: pointer;
+}
+
+.button-up:hover {
+    transform: translate3d(0, 10px, 0);
+}
+
+.button-up::after {
+    content: "";
+    position: absolute;
+    left: 11.5px;
+    z-index: 11;
+    display: block;
+    width: 15px;
+    height: 15px;
+    border-top: 2px solid #fff;
+    border-left: 2px solid #fff;
+}
+
+.button-up::after {
+    top: 15px;
+    transform: rotate(45deg);
 }
