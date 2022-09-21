@@ -1,6 +1,8 @@
 window.onload = () => {
     console.log("initialize");
     randomizeImageSize();
+    randomID();
+    timestamp();
     toggleImage();
     toggleHeader();
     autoUpdate();
@@ -184,8 +186,6 @@ function toggleImage() {
     });
 }
 
-
-
 function uploadImage() {
     const preview = document.getElementById("preview-image-file");
     const file = document.getElementById("upload-image").files[0];
@@ -202,6 +202,34 @@ function uploadImage() {
     randomizeImageSize();
 }
 
+function randomID() {
+    const element = document.getElementById("greentext-random-id");
+    const size = Math.round(getRandomNumber(100000000,999999999));
+    element.textContent = "No." + size;
+}
+
+function timestamp() {
+
+    const element = document.getElementById("greentext-date");
+    const timestamp = new Date();
+
+    const day = String(timestamp.getDate()).padStart(2,0);
+    const month = String(timestamp.getMonth()).padStart(2,0);
+    const year = String(timestamp.getFullYear()).slice(2);
+
+    const weekday = timestamp.getDay();
+    const week = ["Mon","Tue","Wed","Thu","Fri","Sat","Sun"];
+    const weekdayName = week[weekday-1];
+
+    const hour = String(timestamp.getHours()).padStart(2,0);
+    const min = String(timestamp.getMinutes()).padStart(2,0);
+    const sec = String(timestamp.getSeconds()).padStart(2,0);
+
+    const date = `${month}/${day}/${year}(${weekdayName})${hour}:${min}:${sec}`;
+    
+    element.textContent = date;
+}
+
 function toggleHeader() {
     const checkbox = document.getElementById("anonymous");
     const header = document.getElementById("anonymous-date-box");
@@ -212,6 +240,9 @@ function toggleHeader() {
         } else {
             header.style.display = "none";
         }
+
+        randomID();
+        timestamp();
     });
 }
 
