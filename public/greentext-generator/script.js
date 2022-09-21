@@ -10,6 +10,7 @@ window.onload = () => {
     autoUpdate();
     toggleStyle();
     refreshRandom();
+    goToPreview();
 };
 
 let typeOfChange = "quoted";
@@ -195,11 +196,9 @@ function randomImg() {
 
     const maxID = 1084;
     const getRandomID = (max) => Math.round(getRandomNumber(0,max));
-    console.log("boop");
     let imgID = getRandomID(maxID); // get random img id (1084 is max)
 
     url = url + imgID + "/" + imgWidth + "/" + imgHeight; // construct url
-    console.log(url);
     imgElement.src = url; // set src to element
     // in the event that the image url isn't valid, onerror in the html restarts this script
 }
@@ -245,7 +244,6 @@ function randomID() {
     const element = document.getElementById("greentext-random-id");
     const size = Math.round(getRandomNumber(100000000, 999999999));
     element.textContent = "No." + size;
-    console.log("random id");
 }
 
 function timestamp() {
@@ -327,7 +325,7 @@ function randomFlag() {
 
 function refreshRandom() {
 
-    const flag = document.getElementById("random-flag");
+    const flag = document.getElementById("anonymous-flag-container");
     const idAndDate = document.getElementById("timestamp-and-id");
     const img = document.getElementById("preview-image");
 
@@ -339,5 +337,18 @@ function refreshRandom() {
     img.addEventListener("click", function () {
         randomizeImageSize();
         randomImg();
+    });
+}
+
+function scrollToElement(target) {
+    target.scrollIntoView({behavior: "smooth", block: "start"});
+}
+
+function goToPreview() {
+    const button = document.getElementById("goToPreview");
+
+    button.addEventListener("click", function () {
+        const target = document.getElementById("preview");
+        scrollToElement(target);
     });
 }
