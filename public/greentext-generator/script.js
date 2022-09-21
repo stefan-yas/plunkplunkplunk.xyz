@@ -1,12 +1,18 @@
 window.onload = () => {
     console.log("initialize");
+    randomizeImageSize();
     toggleImage();
     toggleHeader();
     autoUpdate();
     toggleStyle();
+    
 };
 
 let typeOfChange = "quoted";
+
+function getRandomNumber(min, max) {
+    return Math.random() * (max - min) + min;
+}
 
 function changeText() {
     const input = document.getElementById("greentext-user-text");
@@ -156,16 +162,25 @@ function downloadFinalImage() {
     link.click(); // click the virtual link, which opens the download interface
 }
 
+function randomizeImageSize() {
+    const element = document.getElementById("random-kb-number");
+    const size = Math.round(getRandomNumber(12,222));
+
+    element.textContent = size;
+}
+
 function toggleImage() {
     const checkbox = document.getElementById("image-toggle");
     const image = document.getElementById("preview-image");
     
     checkbox.addEventListener("change", function() {
         if (this.checked) {
-            image.style.display = "block";
+            image.style.display = "flex";
         } else {
             image.style.display = "none";
         }
+
+        randomizeImageSize();
     });
 }
 
@@ -183,7 +198,9 @@ function uploadImage() {
     if (file) {
       reader.readAsDataURL(file);
     }
-  }
+
+    randomizeImageSize();
+}
 
 function toggleHeader() {
     const checkbox = document.getElementById("anonymous");
@@ -210,3 +227,4 @@ function toggleStyle() {
         }
     });
 }
+
