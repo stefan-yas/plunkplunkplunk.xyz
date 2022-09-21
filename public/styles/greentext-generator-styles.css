@@ -188,6 +188,15 @@ input:checked+.slider:before {
     color: var(--new-style-normal-text);
 }
 
+/* Old Style */
+.old-style .quoted {
+    color: var(--old-style-quoted-text);
+}
+
+.old-style .normal {
+    color: var(--old-style-normal-text);
+}
+
 /* ----------------------------------------------------- */
 /* Anonymous and Date Box */
 
@@ -199,6 +208,11 @@ input:checked+.slider:before {
     align-items: center;
     justify-content: space-between;
     background-color: var(--new-style-anonymous-background);
+}
+
+/* Old Style */
+.old-style #anonymous-date-box {
+    background-color: var(--old-style-anonymous-background);
 }
 
 #anonymous-flag-container {
@@ -216,6 +230,11 @@ input:checked+.slider:before {
     font-weight: 600;
 }
 
+/* Old Style */
+.old-style #anonymous-text {
+    color: var(--old-style-anonymous-text);
+}
+
 #timestamp-and-id {
     padding: 0 20px;
 }
@@ -228,12 +247,11 @@ input:checked+.slider:before {
 
 /* Old style: */
 .old-style #anonymous-date-box {
-    background-color: red;
-    /* Just add .old-style in front of the selector and add whatever changes need to be to make it old style*/
+    background-color: var(--old-style-anonymous-background);
 }
 
 .old-style #preview-image-and-text {
-    background-color: darkcyan;
+    background-color: var(--old-style-background);
 }
 
 /* ----------------------------------------------------- */
