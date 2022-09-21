@@ -54,6 +54,35 @@
             </div>
         </div>
 
+        <div class="button-down"></div>
+
+        <!-- User Input For Image Settings -->
+
+        <div id="image-settings">
+            <div class="toggle">
+                <p>Image On/Off</p>
+                <label class="switch">
+                    <input id="image-toggle" type="checkbox" checked>
+                    <span class="slider round"></span>
+                </label>
+            </div>
+
+            <div class="clover">
+                <a href="https://old.reddit.com/r/AskReddit/comments/3gj8kv/what_is_the_funniest_thing_youve_have_seen_on/"
+                    target="_blank">
+                    <img id="lucky-clover" src="../img/lucky-clover.svg" />
+                </a>
+            </div>
+
+            <div class="image-picker">
+                <label for="upload-image">Choose Image</label>
+                <input id="upload-image" onchange="uploadImage();" type="file" accept="image/jpeg, image/jpg, image/png"
+                    hidden>
+            </div>
+        </div>
+
+        <div class="button-down"></div>
+
         <!-- Date & Style Toggles -->
 
         <div class="preview-box">
@@ -102,36 +131,11 @@
             </div>
         </div>
 
-        <div id="image-settings">
-            <div class="toggle">
-                <p>Image On/Off</p>
-                <label class="switch">
-                    <input id="image-toggle" type="checkbox" checked>
-                    <span class="slider round"></span>
-                </label>
-            </div>
-
-            <div class="clover">
-                <a href="https://old.reddit.com/r/AskReddit/comments/3gj8kv/what_is_the_funniest_thing_youve_have_seen_on/"
-                    target="_blank">
-                    <img id="lucky-clover" src="../img/lucky-clover.svg" />
-                </a>
-
-            </div>
-
-            <div class="image-picker">
-                <label for="upload-image">Choose Image</label>
-                <input id="upload-image" onchange="uploadImage();" type="file" accept="image/jpeg, image/jpg, image/png"
-                    hidden>
-            </div>
-        </div>
+        <div class="button-down"></div>
 
         <button id="generate-greentext" onclick="drawImageOutput();">Generate</button>
 
-        <div id="final-greentext">
-            <!-- <img
-                src="https://64.media.tumblr.com/d681b083a1cb14a3158396c48da14dec/95df193580dfe4b5-d3/s1280x1920/531b077ac06ccc0d3cd38480245405c63024d1e0.png"> -->
-        </div>
+        <div id="final-greentext"></div>
 
         <button id="download-greentext" onclick="downloadFinalImage();">Download</button>
 
