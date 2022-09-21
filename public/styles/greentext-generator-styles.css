@@ -255,6 +255,7 @@ input:checked+.slider:before {
 #greentext-date,
 #greentext-random-id {
     color: var(--new-style-normal-text);
+    padding-left: 5px;
 }
 
 /* ----------------------------------------------------- */
