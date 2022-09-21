@@ -3,7 +3,7 @@ window.onload = () => {
     randomizeImageSize();
     randomID();
     randomFlag();
-    randomImg();
+    //randomImg();
     timestamp();
     toggleImage();
     toggleHeader();
@@ -195,9 +195,11 @@ function randomImg() {
 
     const maxID = 1084;
     const getRandomID = (max) => Math.round(getRandomNumber(0,max));
+    console.log("boop");
     let imgID = getRandomID(maxID); // get random img id (1084 is max)
 
     url = url + imgID + "/" + imgWidth + "/" + imgHeight; // construct url
+    console.log(url);
     imgElement.src = url; // set src to element
     // in the event that the image url isn't valid, onerror in the html restarts this script
 }
@@ -243,6 +245,7 @@ function randomID() {
     const element = document.getElementById("greentext-random-id");
     const size = Math.round(getRandomNumber(100000000, 999999999));
     element.textContent = "No." + size;
+    console.log("random id");
 }
 
 function timestamp() {
@@ -280,6 +283,19 @@ function toggleHeader() {
 
         randomID();
         timestamp();
+    });
+}
+
+function toggleFlag() {
+    const checkbox = document.getElementById("flag-toggle");
+    const flag = document.getElementById("random-flag");
+
+    checkbox.addEventListener("change", function () {
+        if (this.checked) {
+            flag.style.display = "inherit";
+        } else {
+            flag.style.display = "none";
+        }
     });
 }
 
