@@ -17,10 +17,6 @@
     <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono&display=swap" rel="stylesheet">
     <link rel="icon" type=”image/svg+xml” href="../img/favicon.svg" />
     <link rel="canonical" href="https://plunkplunkplunk.xyz/plunk/greentext-generator" />
-    <script defer type="text/javascript" src="https://html2canvas.hertzen.com/dist/html2canvas.min.js"></script>
-    <script type="text/javascript" src="./script.js"></script>
-    <script type="text/javascript" src="./countries.js"></script>
-
 </head>
 
 <body>
@@ -45,17 +41,17 @@
         <div id="greentext-input-container">
             <div id="textarea">
                 <label for="greentext-user-text">
-                    <h3 class="greentext-h3">Edit your Greentext</h3>
+                    <h3 class="greentext-h3">edit your greentext</h3>
                 </label>
                 <div id="styling-buttons">
-                    <button id="normal-text" onclick="makeNormalText();">Normal Text</button>
+                    <button id="normal-text" onclick="makeNormalText();">normal text</button>
                     <div class="clover">
                         <a href="https://old.reddit.com/r/AskReddit/comments/3gj8kv/what_is_the_funniest_thing_youve_have_seen_on/"
                             target="_blank">
                             <img id="lucky-clover" src="../img/lucky-clover.svg" />
                         </a>
                     </div>
-                    <button id="quote-text" onclick="makeQuotedText();">Quote Text</button>
+                    <button id="quote-text" onclick="makeQuotedText();">quote text</button>
 
                 </div>
 
@@ -67,7 +63,7 @@
 
             <div id="image-settings">
                 <div class="toggle">
-                    <p>Image On/Off</p>
+                    <p>image on/off</p>
                     <label class="switch">
                         <input id="image-toggle" type="checkbox" checked>
                         <span class="slider round"></span>
@@ -75,7 +71,7 @@
                 </div>
 
                 <div class="image-picker">
-                    <label id="image-picker-label" for="upload-image">Choose Image</label>
+                    <label id="image-picker-label" for="upload-image">choose image</label>
                     <input id="upload-image" onchange="uploadImage();" type="file"
                         accept="image/jpeg, image/jpg, image/png" hidden>
                 </div>
@@ -88,12 +84,12 @@
 
         <div class="preview-box" id="preview">
 
-            <h3 class="greentext-h3">Customize</h3>
+            <h3 class="greentext-h3">customize</h3>
 
             <div class="toggle-container">
 
                 <div class="toggle">
-                    <p>Header</p>
+                    <p>header</p>
                     <label class="switch">
                         <input id="anonymous" type="checkbox" checked>
                         <span class="slider round"></span>
@@ -101,7 +97,7 @@
                 </div>
 
                 <div class="toggle">
-                    <p>Flag</p>
+                    <p>flag</p>
                     <label class="switch">
                         <input id="flag-toggle" onclick="toggleFlag()" type="checkbox" checked>
                         <span class="slider round"></span>
@@ -122,12 +118,12 @@
 
             <div id="preview-container" class="new-style">
                 <div id="anonymous-date-box">
-                    <div class="tooltip" id="anonymous-flag-container"><span class="tooltiptext">Click on the flag to
-                            change it.</span>
+                    <div class="tooltip" id="anonymous-flag-container"><span class="tooltiptext">click on the flag to
+                            change it</span>
                         <span id="anonymous-text">⋮ Anonymous</span><img height="20px" id="random-flag" src=""></span>
                     </div>
-                    <div class="tooltip" id="timestamp-and-id"><span class="tooltiptext">Click on the timestamp or post
-                            number to change it.</span>
+                    <div class="tooltip" id="timestamp-and-id"><span class="tooltiptext">click on the timestamp or post
+                            number to change it</span>
                         <span id="greentext-date">05/24/22(Tue)12:39:26</span>
                         <span id="greentext-random-id">No.165199250</span>
                     </div>
@@ -145,13 +141,13 @@
 
         <div class="button-up" id="editbox"></div>
 
-        <button id="generate-greentext" onclick="drawImageOutput();">Make Greentext</button>
+        <button id="generate-greentext" onclick="drawImageOutput();">make greentext</button>
 
         <div id="final-greentext"></div>
 
-        <button id="download-greentext" onclick="downloadFinalImage();">Download Greentext</button>
+        <button id="download-greentext" onclick="downloadFinalImage();">download greentext</button>
 
-        <img src="../img/pepe.svg" id="pepe" >
+        <img src="../img/pepe.svg" id="pepe">
 
     </main>
 
@@ -174,7 +170,9 @@
         </div>
     </footer>
 
-
+    <script defer type="text/javascript" src="https://html2canvas.hertzen.com/dist/html2canvas.min.js"></script>
+    <script type="text/javascript" src="./script.js"></script>
+    <script type="text/javascript" src="./countries.js"></script>
     <script data-goatcounter="https://plunk.goatcounter.com/count" async src="//gc.zgo.at/count.js"></script>
 
 </body>
