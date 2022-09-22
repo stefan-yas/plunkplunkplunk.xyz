@@ -3,7 +3,7 @@ window.onload = () => {
     randomizeImageSize();
     randomID();
     randomFlag();
-    randomImg();
+    //randomImg();
     timestamp();
     goToPreview();
     goToEdit();
@@ -27,14 +27,25 @@ function changeText() {
     let selectionStart = input.selectionStart; // where selected text begins
     const selectionEnd = input.selectionEnd; // where selected text ends
 
+    console.log(input.value[selectionStart]);
+
     // Alter the beginning if selection start in the middle of a line
-    while (input.value[selectionStart] !== "\n" && selectionStart !== -1) { // as long as the character is not newline and index exists...
+    while 
+    (input.value[selectionStart] !== "\n" && selectionStart !== -1 // as long as the character is not newline and index exists...
+    || input.value[selectionStart] == "\n" && selectionStart == selectionEnd) { // or the charater is newline and selection start and end are the same...
         selectionStart--; // go back one character (so go back one character until we reach a newline character (\n) or until we run out of text (-1))
     }
+
+    console.log("s start: " + selectionStart);  // -1       // 1
+    console.log("s end: " + selectionEnd);      // 1        // 1
 
     const beforeSelection = input.value.slice(0, selectionStart + 1); // part from beginning until where selected text starts
     const selection = input.value.slice(selectionStart + 1, selectionEnd); // selected text
     const afterSelection = input.value.slice(selectionEnd); // part from where selected text ends until the ends
+
+    console.log(beforeSelection);
+    console.log(selection);
+    console.log(afterSelection);
 
     const unchangedArray = selection.split("\n"); // split selected text into array by newline
     console.log(unchangedArray);
