@@ -600,3 +600,9 @@ hr.rounded {
     top: 15px;
     transform: rotate(45deg);
 }
+
+/* Pepe */
+#pepe {
+    display: none;
+    width: 250px;
+}
