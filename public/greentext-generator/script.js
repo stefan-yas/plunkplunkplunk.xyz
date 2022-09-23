@@ -48,6 +48,7 @@ window.onload = () => {
     refreshRandom();
     autoUpdate();
     pepe();
+    biggerTextarea();
 };
 
 function inputState() {
@@ -371,10 +372,12 @@ function pepe() {
 function biggerTextarea() {
     const textarea = document.getElementById("greentext-user-text");
     const expandButton = document.getElementById("bigger-textarea");
+    const mommyDiv = document.getElementById("textarea");
 
     expandButton.addEventListener("click", function () {
-        // (textarea.rows = 30) && (textarea.cols = 150);
-
-        console.log(textarea);
+        mommyDiv.style.width = "90vw";
+        textarea.rows = 30;
+        textarea.cols = 150;
+        expandButton.style.display = "none";
     });
 }
