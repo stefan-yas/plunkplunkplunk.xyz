@@ -195,7 +195,7 @@ function downloadFinalImage() {
     const link = document.createElement("a"); // virtual link for download
     link.download = "greentext.jpeg"; // default name for the image
 
-    let imgCompression = 0.1; // should be optional to lower quality
+    let imgCompression = 1; // should be optional to lower quality
 
     link.href = document.getElementById("outputCanvas").toDataURL("image/jpeg", imgCompression); // convert canvas to image
     link.click(); // click the virtual link, which opens the download interface
