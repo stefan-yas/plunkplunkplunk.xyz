@@ -622,3 +622,13 @@ hr.rounded {
     display: none;
     width: 250px;
 }
+
+#bigger-textarea {
+    opacity: 80%;
+    position: relative;
+    top: -42px;
+    left: 785px;
+    background: url(../img/expand.svg);
+    width: 20px;
+    height: 20px;
+}

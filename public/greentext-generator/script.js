@@ -3,7 +3,9 @@ let INPUT_STATE = "inactive";
 let typeOfChange = "quoted";
 let INPUT_ELEMENT;
 
-function getRandomNumber(min, max) { return Math.random() * (max - min) + min; }
+function getRandomNumber(min, max) {
+    return Math.random() * (max - min) + min;
+}
 
 function randomImg() {
     console.log("random img");
@@ -12,17 +14,17 @@ function randomImg() {
     let imgHeight = 200;
     let imgWidth = 200;
 
-    const randomizeImgDimensions = Math.round(getRandomNumber(0,3)); // increasing the second number will decrease the odds of dimensions being randomized
+    const randomizeImgDimensions = Math.round(getRandomNumber(0, 3)); // increasing the second number will decrease the odds of dimensions being randomized
 
     // 50% chance to randomize either height or width
     if (randomizeImgDimensions === 0) {
-        imgHeight = Math.round(getRandomNumber(100,200))
+        imgHeight = Math.round(getRandomNumber(100, 200))
     } else if (randomizeImgDimensions === 1) {
-        imgWidth = Math.round(getRandomNumber(100,200))
+        imgWidth = Math.round(getRandomNumber(100, 200))
     }
 
     const maxID = 1084;
-    const getRandomID = (max) => Math.round(getRandomNumber(0,max));
+    const getRandomID = (max) => Math.round(getRandomNumber(0, max));
     let imgID = getRandomID(maxID); // get random img id (1084 is max)
 
     url = url + imgID + "/" + imgWidth + "/" + imgHeight; // construct url
@@ -65,9 +67,9 @@ function changeText() {
         const selectionEnd = INPUT_ELEMENT.selectionEnd; // where selected text ends
 
         // Alter the beginning if selection start in the middle of a line
-        while 
-        (INPUT_ELEMENT.value[selectionStart] !== "\n" && selectionStart !== -1 // as long as the character is not newline and index exists...
-        || INPUT_ELEMENT.value[selectionStart] == "\n" && selectionStart == selectionEnd) { // or the charater is newline and selection start and end are the same...
+        while (INPUT_ELEMENT.value[selectionStart] !== "\n" && selectionStart !== -1 // as long as the character is not newline and index exists...
+            ||
+            INPUT_ELEMENT.value[selectionStart] == "\n" && selectionStart == selectionEnd) { // or the charater is newline and selection start and end are the same...
             selectionStart--; // go back one character (so go back one character until we reach a newline character (\n) or until we run out of text (-1))
         }
 
@@ -172,7 +174,9 @@ function drawImageOutput() {
         // show download button
         const downloadButton = document.getElementById("download-greentext");
         downloadButton.style.display = "block";
-        container.scrollIntoView({ behavior: "smooth" });
+        container.scrollIntoView({
+            behavior: "smooth"
+        });
     }
 
     html2canvas(document.getElementById("preview-container"), {
@@ -334,7 +338,10 @@ function refreshRandom() {
 }
 
 function scrollToElement(target, block) {
-    target.scrollIntoView({behavior: "smooth", block: block});
+    target.scrollIntoView({
+        behavior: "smooth",
+        block: block
+    });
 }
 
 function goToPreview() {
@@ -359,4 +366,15 @@ function pepe() {
         drawImageOutput();
         (INPUT_ELEMENT.style.background = "no-repeat url(../img/pepe.svg) 30% 0%") && (INPUT_ELEMENT.style.backgroundSize = "contain");
     }
+}
+
+function biggerTextarea() {
+    const textarea = document.getElementById("greentext-user-text");
+    const expandButton = document.getElementById("bigger-textarea");
+
+    expandButton.addEventListener("click", function () {
+        // (textarea.rows = 30) && (textarea.cols = 150);
+
+        console.log(textarea);
+    });
 }
