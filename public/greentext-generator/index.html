@@ -45,19 +45,14 @@
         <div id="greentext-input-container">
             <div id="textarea">
                 <label for="greentext-user-text">
-                    <h3 class="greentext-h3">edit your greentext</h3>
-                </label>
-                <div id="styling-buttons">
-                    <button id="normal-text" onclick="makeNormalText();">normal text</button>
-                    <div class="clover">
+                    <h3 class="greentext-h3">edit your greentext <div class="clover">
                         <a href="https://old.reddit.com/r/AskReddit/comments/3gj8kv/what_is_the_funniest_thing_youve_have_seen_on/"
                             target="_blank">
                             <img id="lucky-clover" src="../img/lucky-clover.svg" />
                         </a>
-                    </div>
-                    <button id="quote-text" onclick="makeQuotedText();">quote text</button>
+                    </div></h3>
+                </label>
 
-                </div>
 
                 <textarea id="greentext-user-text" onchange="changePreview();" name="greentext-user-text"
                     placeholder=">be me" rows="10" cols="75"></textarea>
@@ -79,6 +74,15 @@
                     <input id="upload-image" onchange="uploadImage();" type="file"
                         accept="image/jpeg, image/jpg, image/png" hidden>
                 </div>
+
+
+                <button id="normal-text" onclick="makeNormalText();">normal text</button>
+
+                
+
+                <button id="quote-text" onclick="makeQuotedText();">quote text</button>
+
+
             </div>
         </div>
 
@@ -88,7 +92,7 @@
 
         <div class="preview-box" id="preview">
 
-            <h3 class="greentext-h3">customize</h3>
+            <h3 class="greentext-h3-customize">customize</h3>
 
             <div class="toggle-container">
 

@@ -42,6 +42,7 @@ button,
     border-radius: 10px;
     background-color: rgba(217, 161, 192, .7);
     cursor: pointer;
+    white-space: nowrap;
 }
 
 button:active {
@@ -53,6 +54,12 @@ button:active {
 }
 
 .greentext-h3 {
+    float: left;
+    background: none;
+    text-align: center;
+}
+
+.greentext-h3-customize {
     background: none;
     text-align: center;
 }
@@ -98,6 +105,7 @@ button:active {
     justify-content: center;
     align-items: center;
     padding: 7px;
+    white-space: nowrap;
 }
 
 .toggle p {
@@ -380,13 +388,28 @@ input:checked+.slider:before {
 /* Image Options */
 
 #image-settings {
-    display: flex;
-    flex-direction: row;
-    gap: 5.5em;
-    align-items: center;
-    justify-content: space-around;
-    margin-top: 1em;
-    margin-bottom: 1em;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    grid-column-gap: 5em;
+    grid-row-gap: 1em;
+    padding: 1em;
+}
+
+#image-settings .toggle {
+    grid-area: 1 / 1 / 2 / 2;
+}
+
+#image-settings .image-picker {
+    grid-area: 1 / 2 / 2 / 3;
+}
+
+#image-settings #normal-text {
+    grid-area: 2 / 1 / 3 / 2;
+}
+
+#image-settings #quote-text {
+    grid-area: 2 / 2 / 3 / 3;
 }
 
 #image-settings p {
@@ -408,7 +431,8 @@ input:checked+.slider:before {
 }
 
 .clover {
-    line-height: 1;
+    float: right;
+    line-height: 0.1;
 }
 
 .clover a {
@@ -454,14 +478,6 @@ input:checked+.slider:before {
     margin-top: 1em;
     margin-bottom: 1em;
     outline: 3px dashed var(--new-style-anonymous-text);
-}
-
-#styling-buttons {
-    width: 100%;
-    display: flex;
-    flex-direction: row;
-    justify-content: space-around;
-    /* outline: 1px dashed var(--new-style-anonymous-text); */
 }
 
 #normal-text,
