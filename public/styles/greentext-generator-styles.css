@@ -396,6 +396,7 @@ input:checked+.slider:before {
     grid-column-gap: 1em;
     grid-row-gap: 1em;
     padding: 1em;
+    padding-top: 0px;
 }
 
 #image-settings #normal-text {
