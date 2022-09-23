@@ -357,6 +357,6 @@ function pepe() {
     const generateButton = document.getElementById("generate-greentext");
     generateButton.onclick = function () {
         drawImageOutput();
-        (INPUT_ELEMENT.style.background = "no-repeat url(../img/pepe.svg)") && (INPUT_ELEMENT.style.backgroundSize = "contain");
+        (INPUT_ELEMENT.style.background = "no-repeat url(../img/pepe.svg) 30% 0%") && (INPUT_ELEMENT.style.backgroundSize = "contain");
     }
 }
