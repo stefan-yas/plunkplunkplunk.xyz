@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>greentext generator | plunk plunk plunk</title>
+    <meta charset="UTF-8" />
+    <link rel="stylesheet" href="../styles/styles.css" />
+    <link rel="stylesheet" href="../styles/greentext-generator-styles.css" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta property="og:title" content="greentext generator | plunk plunk plunk" />
+    <meta property="og:image" content="" />
+    <meta property="og:site_name" content="plunkplunkplunk.xyz" />
+    <meta property="og:description" content="generate your filthy greentext and save as an image" />
+    <meta name="author" content="Stefan Yas" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono&display=swap" rel="stylesheet">
+    <link rel="icon" type=”image/svg+xml” href="../img/favicon.svg" />
+    <link rel="canonical" href="https://plunkplunkplunk.xyz/plunk/greentext-generator" />
+    <script type="text/javascript" src="https://html2canvas.hertzen.com/dist/html2canvas.min.js"></script>
+    <script type="text/javascript" src="./countries.js"></script>
+    <script type="text/javascript" src="./script.js"></script>
+    <script defer data-goatcounter="https://plunk.goatcounter.com/count" async src="//gc.zgo.at/count.js"></script>
+</head>
+
+<body>
+
+    <header>
+        <div class="logo">
+            <a href="https://plunkplunkplunk.xyz"><img class="desktop" src="../img/title.svg" alt="title"></a>
+
+            <a href="https://plunkplunkplunk.xyz"><img class="mobile" src="../img/logo-mobile.svg" alt="title"></a>
+        </div>
+
+        <h1>greentext generator</h1>
+
+        <h2>create, style and share your newest greentext</h2>
+
+    </header>
+
+    <main class="greentext-main">
+
+        <!-- User Input -->
+
+        <div id="greentext-input-container">
+            <div id="textarea">
+                <label for="greentext-user-text">
+                    <h3 class="greentext-h3">edit your greentext <div class="clover">
+                            <a href="https://old.reddit.com/r/AskReddit/comments/3gj8kv/what_is_the_funniest_thing_youve_have_seen_on/"
+                                target="_blank">
+                                <img id="lucky-clover" src="../img/lucky-clover.svg" />
+                            </a>
+                        </div>
+                    </h3>
+                </label>
+
+                <div class="textarea">
+                    <textarea id="greentext-user-text" onchange="changePreview();" name="greentext-user-text"
+                        placeholder=">be me" rows="10" cols="75"></textarea>
+                    <div id="bigger-textarea"></div>
+                </div>
+            </div>
+
+            <!-- User Input For Image Settings -->
+
+            <div id="image-settings">
+
+                <button id="normal-text" onclick="makeNormalText();">normal text</button>
+
+                <button id="quote-text" onclick="makeQuotedText();">quote text</button>
+
+                <div class="toggle">
+                    <p>image on/off</p>
+                    <label class="switch">
+                        <input id="image-toggle" type="checkbox" checked>
+                        <span class="slider round"></span>
+                    </label>
+                </div>
+
+                <div class="image-picker">
+                    <label id="image-picker-label" for="upload-image">choose image</label>
+                    <input id="upload-image" onchange="uploadImage();" type="file"
+                        accept="image/jpeg, image/jpg, image/png" hidden>
+                </div>
+
+            </div>
+        </div>
+
+        <div class="button-down" id="goToPreview"></div>
+
+        <!-- Preview -->
+
+        <div class="preview-box" id="preview">
+
+            <h3 class="greentext-h3-customize">customize</h3>
+
+            <div class="toggle-container">
+
+                <div class="toggle">
+                    <p>header</p>
+                    <label class="switch">
+                        <input id="anonymous" type="checkbox" checked>
+                        <span class="slider round"></span>
+                    </label>
+                </div>
+
+                <div class="toggle">
+                    <p>flag</p>
+                    <label class="switch">
+                        <input id="flag-toggle" onclick="toggleFlag()" type="checkbox" checked>
+                        <span class="slider round"></span>
+                    </label>
+                </div>
+
+                <div class="toggle">
+                    <p>style</p>
+                    <label class="switch">
+                        <input id="greentext-style" type="checkbox" checked>
+                        <span class="slider round"></span>
+                    </label>
+                </div>
+
+            </div>
+
+            <!-- Date & Style Toggles -->
+
+            <div id="preview-container" class="new-style">
+                <div id="anonymous-date-box">
+                    <div class="tooltip" id="anonymous-flag-container"><span class="tooltiptext">click on the flag to
+                            change it</span>
+                        <span id="anonymous-text">⋮ Anonymous</span><img height="20px" id="random-flag" src=""></span>
+                    </div>
+                    <div class="tooltip" id="timestamp-and-id"><span class="tooltiptext">click on the timestamp or post
+                            number to change it</span>
+                        <span id="greentext-date">05/24/22(Tue)12:39:26</span>
+                        <span id="greentext-random-id">No.165199250</span>
+                    </div>
+                </div>
+
+                <div id="preview-image-and-text">
+                    <div id="preview-image">
+                        <img id="preview-image-file" src="" onerror="randomImg();">
+                        <p id="preview-image-size" class="disclaimer"><span id="random-kb-number"></span> KB PNG</p>
+                    </div>
+                    <pre id="preview-text"></pre>
+                </div>
+            </div>
+        </div>
+
+        <div class="button-up" id="editbox"></div>
+
+        <button id="generate-greentext">make greentext</button>
+
+        <div id="final-greentext"></div>
+
+        <button id="download-greentext" onclick="downloadFinalImage();">download greentext</button>
+
+        <img src="../img/pepe.svg" id="pepe">
+
+    </main>
+
+    <footer>
+        <div class="navbar">
+            <div class="footer-flex-container">
+                <div class="footer-flex-item">
+                    <a href="https://plunkplunkplunk.xyz/whats-a-plunk">what's a plunk?</a>
+                </div>
+                <div class="footer-flex-item">
+                    <a href="https://plunkplunkplunk.xyz/plunks">plunks</a>
+                </div>
+                <div class="footer-flex-item">
+                    <a href="https://stefanyas.me">who am i?</a>
+                </div>
+                <div class="footer-flex-item">
+                    <a href="https://github.com/stefan-yas/plunkplunkplunk.xyz">github</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+</body>
+
+</html>
