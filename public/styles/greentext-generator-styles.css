@@ -57,6 +57,7 @@ button:active {
     float: left;
     background: none;
     text-align: center;
+    margin-bottom: 0px;
 }
 
 .greentext-h3-customize {
