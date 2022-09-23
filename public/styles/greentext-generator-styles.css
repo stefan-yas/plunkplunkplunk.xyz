@@ -559,7 +559,6 @@ hr.rounded {
     width: 30px;
     border-radius: 50%;
     transition: all 0.2s linear;
-    box-shadow: 0px 0px 0px 5px var(--toggle-slider);
     cursor: pointer;
 }
 
@@ -594,7 +593,6 @@ hr.rounded {
     width: 30px;
     border-radius: 50%;
     transition: all 0.2s linear;
-    box-shadow: 0px 0px 0px 5px var(--toggle-slider);
     cursor: pointer;
 }
 
