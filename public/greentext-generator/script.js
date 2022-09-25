@@ -259,8 +259,8 @@ function timestamp() {
     const year = String(timestamp.getFullYear()).slice(2);
 
     const weekday = timestamp.getDay();
-    const week = ["Mon", "Tue", "Wed", "Thu", "Fri", "Sat", "Sun"];
-    const weekdayName = week[weekday - 1];
+    const week = ["Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat"];
+    const weekdayName = week[weekday];
 
     const hour = String(timestamp.getHours()).padStart(2, 0);
     const min = String(timestamp.getMinutes()).padStart(2, 0);
