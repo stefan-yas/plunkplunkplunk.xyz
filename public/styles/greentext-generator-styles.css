@@ -520,15 +520,6 @@ input:checked+.slider:before {
 }
 
 /* ----------------------------------------------------- */
-/* Divider */
-
-hr.rounded {
-    width: 70%;
-    border-top: 3px solid var(--divider);
-    border-radius: 5px;
-}
-
-/* ----------------------------------------------------- */
 /* Generate Button */
 
 .big-button {
@@ -712,6 +703,19 @@ hr.rounded {
 
     .slider.round {
         top: -7px;
+    }
+
+    .toggle-container {
+        padding-top: 0px;
+    }
+
+    .toggle {
+        flex-direction: column;
+        gap: 0px;
+    }
+
+    .greentext-h3-customize {
+        padding-top: 0px;
     }
 }
 
