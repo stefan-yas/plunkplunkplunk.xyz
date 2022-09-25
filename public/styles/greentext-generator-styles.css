@@ -637,13 +637,12 @@ hr.rounded {
     opacity: 80%;
     position: relative;
     float: right;
-    margin-top: -40px;
-    margin-right: -10px;
+    margin-top: -35px;
+    margin-right: -7px;
     background: url(../img/expand.svg);
     background-repeat: no-repeat;
     width: 20px;
     height: 20px;
-
     border: none;
     border-radius: unset;
     cursor: pointer;
@@ -676,27 +675,77 @@ hr.rounded {
         grid-area: 4 / 1;
     }
 
-    
-
-    /*#anonymous-text, #greentext-date, #greentext-random-id {
-        font-size: 14px;
-    }*/
-
-    
-}
-
-
-
-@media only screen and (max-width: 760px) {
-
     .toggle-container {
         flex-direction: column;
+        padding-top: 1em;
+        padding-bottom: 1em;
+        align-items: center;
     }
 
     #preview-image {
         width: fit-content;
         margin-left: 20px;
     }
+
+    .clover {
+        float: none;
+    }
+
+    button, #image-picker-label {
+        font-size: 18px;
+    }
+
+    #normal-text, .big-button {
+        height: 7vh;
+    }
+
+    #quote-text {
+        height: 7vh;
+    }
+
+    anonymous-date-box {
+        flex-direction: column;
+        flex-wrap: nowrap;
+        align-items: flex-start;
+    }
+
+    #anonymous-text, #timestamp-and-id {
+        font-size: 12px;
+    }
+
+    #random-flag {
+        height: 12px;
+    }
+
+    .switch {
+        padding: 0px;
+    }
+
+    .button-up, .button-down {
+        margin: 0 auto;
+    }
+
+    .slider.round {
+        top: -7px;
+    }
+
+    #preview-image {
+        width: 100px;
+    }
+
+    #preview-text, .disclaimer, .normal, .quoted {
+        font-size: 12px;
+    }
+
+    .disclaimer {
+        white-space: nowrap;
+    }
+}
+
+
+
+@media only screen and (max-width: 760px) {
+
 }
 
 @media only screen and (max-width: 600px) {
