@@ -509,7 +509,6 @@ input:checked+.slider:before {
     gap: 1em;
     align-items: center;
     justify-content: space-evenly;
-    z-index: 9999;
 }
 
 #textarea label {
@@ -518,15 +517,6 @@ input:checked+.slider:before {
 
 .textarea {
     line-height: 0;
-}
-
-/* ----------------------------------------------------- */
-/* Divider */
-
-hr.rounded {
-    width: 70%;
-    border-top: 3px solid var(--divider);
-    border-radius: 5px;
 }
 
 /* ----------------------------------------------------- */
@@ -695,26 +685,12 @@ hr.rounded {
         font-size: 18px;
     }
 
-    #normal-text, .big-button {
+    #normal-text {
         height: 7vh;
     }
 
     #quote-text {
         height: 7vh;
-    }
-
-    anonymous-date-box {
-        flex-direction: column;
-        flex-wrap: nowrap;
-        align-items: flex-start;
-    }
-
-    #anonymous-text, #timestamp-and-id {
-        font-size: 12px;
-    }
-
-    #random-flag {
-        height: 12px;
     }
 
     .switch {
@@ -729,16 +705,17 @@ hr.rounded {
         top: -7px;
     }
 
-    #preview-image {
-        width: 100px;
+    .toggle-container {
+        padding-top: 0px;
     }
 
-    #preview-text, .disclaimer, .normal, .quoted {
-        font-size: 12px;
+    .toggle {
+        flex-direction: column;
+        gap: 0px;
     }
 
-    .disclaimer {
-        white-space: nowrap;
+    .greentext-h3-customize {
+        padding-top: 0px;
     }
 }
 
@@ -753,4 +730,33 @@ hr.rounded {
     .logo .mobile {
         width: 70%;
     }
+
+    anonymous-date-box {
+        flex-direction: column;
+        flex-wrap: nowrap;
+        align-items: flex-start;
+        gap: 10px;
+    }
+
+    #anonymous-text, #timestamp-and-id {
+        font-size: 17px;
+    }
+
+    #random-flag {
+        height: 17px;
+    }
+
+    #preview-image {
+        width: 100px;
+    }
+
+    #preview-text, .disclaimer, .normal, .quoted {
+        font-size: 17px;
+    }
+
+    .disclaimer {
+        font-size: 15px;
+        white-space: nowrap;
+    }
+
 }
