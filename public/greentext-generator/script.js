@@ -166,40 +166,7 @@ function autoUpdate() { // this functions starts when page loads
     }, 3000); // check every x seconds
 }
 
-function drawImageOutput() {
 
-    const container = document.getElementById("final-greentext");
-    container.textContent = ""; // delete previous element
-
-    function scrollDown() {
-        // show download button
-        const downloadButton = document.getElementById("download-greentext");
-        downloadButton.style.display = "block";
-        container.scrollIntoView({
-            behavior: "smooth"
-        });
-    }
-
-    html2canvas(document.getElementById("preview-container"), {
-        /*allowTaint: true*/
-        useCORS: true
-    }).then(canvas => {
-        document.getElementById("final-greentext").appendChild(canvas); // create canvas using a library
-        canvas.setAttribute("id", "outputCanvas"); // set id to canvas
-
-        scrollDown();
-    })
-}
-
-function downloadFinalImage() {
-    const link = document.createElement("a"); // virtual link for download
-    link.download = "greentext.jpeg"; // default name for the image
-
-    let imgCompression = 1; // should be optional to lower quality
-
-    link.href = document.getElementById("outputCanvas").toDataURL("image/jpeg", imgCompression); // convert canvas to image
-    link.click(); // click the virtual link, which opens the download interface
-}
 
 function randomizeImageSize() {
     const element = document.getElementById("random-kb-number");
@@ -380,4 +347,49 @@ function biggerTextarea() {
         textarea.cols = 150;
         expandButton.style.display = "none";
     });
+}
+
+function drawImageOutput() {
+
+    const container = document.getElementById("final-greentext");
+    container.textContent = ""; // delete previous element
+
+    function scrollDown() {
+        // show download button
+        const downloadButton = document.getElementById("download-greentext");
+        downloadButton.style.display = "block";
+        container.scrollIntoView({
+            behavior: "smooth"
+        });
+    }
+
+    html2canvas(document.getElementById("preview-container"), {
+        /*allowTaint: true*/
+        useCORS: true,
+        onclone: (element) => {
+            console.log(window.innerWidth);
+            if (window.innerWidth <= 600) {
+                // mobile version
+                element.getElementById("preview-image-and-text").style.background = "red";
+            } else {
+                // desktop version
+                element.getElementById("preview-container").style.width = "834px";
+            }
+        }
+    }).then(canvas => {
+        document.getElementById("final-greentext").appendChild(canvas); // create canvas using a library
+        canvas.setAttribute("id", "outputCanvas"); // set id to canvas
+
+        scrollDown();
+    })
+}
+
+function downloadFinalImage() {
+    const link = document.createElement("a"); // virtual link for download
+    link.download = "greentext.jpeg"; // default name for the image
+
+    let imgCompression = 1; // should be optional to lower quality
+
+    link.href = document.getElementById("outputCanvas").toDataURL("image/jpeg", imgCompression); // convert canvas to image
+    link.click(); // click the virtual link, which opens the download interface
 }
