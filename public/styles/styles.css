@@ -362,46 +362,22 @@ label {
 }
 
 .homepage-main {
-    display: contents;
-}
-
-.homepage-grid-container {
-    width: 100%;
-    display: grid;
-    grid-template-columns: 1fr 3fr 1fr;
-    grid-template-rows: 1fr 3fr repeat(2, 1fr);
-    gap: 40px;
-}
-
-.whatsaplunk {
-    grid-area: 1 / 1 / 2 / 2;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    align-items: stretch;
+    justify-content: center;
+    margin-bottom: 5em;
 }
 
 .alex-g-container {
-    grid-area: 2 / 2 / 3 / 3;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
-
-.plunksbutton {
-    grid-area: 3 / 3 / 4 / 4;
-}
-
-.whoami {
-    grid-area: 4 / 1 / 5 / 2;
-}
-
-.github {
-    grid-area: 4 / 3 / 5 / 4;
-}
-
-
-
-/* .alex-g-container {
-    width: 800px;
-} */
 
 #behold {
-    height: 20vh;
-    object-fit: cover;
+    width: 700px;
 }
 
 .show-plunks {
@@ -421,6 +397,7 @@ label {
     border-radius: 0;
     box-shadow: inset 0 0 0 var(--border-size) currentcolor;
     transition: background 0.8s ease;
+    margin-bottom: 3em;
 }
 
 .show-plunks:hover {
@@ -485,6 +462,7 @@ label {
     font-size: 25px;
     font-style: italic;
     font-weight: 600;
+    padding: 3em 9em;
 }
 
 
