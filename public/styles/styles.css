@@ -374,10 +374,37 @@ label {
     display: flex;
     align-items: center;
     justify-content: center;
+
+    margin: 100px;
+    position: relative; /*required for eyes*/
+}
+
+.alex-g-container > div > div {
+    position: absolute;  /*required for eyes*/
+    border: 1px solid red;
+    background-color: red;
+    opacity: 0.2;
+    border-radius: 50%;
+}
+
+#leftEye {
+    height: 3%;
+    width: 3%;
+    top: 42.2%;
+    left: 31.5%;
+}
+
+#rightEye {
+    height: 3.5%;
+    width: 3.5%;
+    top: 41.6%;
+    left: 37.2%;
 }
 
 #behold {
-    width: 700px;
+    /*width: 700px;*/ 
+    position: relative;  /*required for eyes*/
+    background-color: darkgray;
 }
 
 .show-plunks {
