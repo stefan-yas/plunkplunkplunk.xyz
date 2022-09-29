@@ -424,7 +424,7 @@ label {
 }
 
 .show-plunks:hover {
-    background: rgba(100, 0, 0, .03);
+    background: rgba(2, 139, 128, 0.1);
 }
 
 .show-plunks_horizontal,
