@@ -2,8 +2,8 @@
 
 // Settings:
 const EYE_IDS = ["leftEye", "rightEye"]; // Add IDs of each eye into this array
-const PROJECTION = 0.03 // Drag/projection effect - decrease number to increase it or set to 1 to remove it (% between base center and mouse position)
-const DELAY = 100;
+const PROJECTION = 0.03 // default: 0.03 Drag/projection effect - decrease number to increase it or set to 1 to remove it (% between base center and mouse position)
+const DELAY = 100; // default: 100
 
 window.onload = () => {
 
@@ -26,10 +26,11 @@ function renderEye(baseEl, dotEl) {
     const dotRadius = dotBox.height / 2;
     const r = baseRadius - dotRadius + 1; // moved inwards by the side of eye dot, but minus 1px (which makes it look smoother)
 
+    console.log(baseRadius, dotRadius);
+
     // Find center of the base element
     const Xb = baseBox.x + (baseBox.width / 2);
     const Yb = baseBox.y + (baseBox.height / 2);
-    console.log(Xb, Yb);
 
     const linearInterpolation = (a, b, p) => (1-p)*a + p*b;
 
@@ -53,7 +54,7 @@ function renderEye(baseEl, dotEl) {
     
         // Calculate distance between center of the eye and the dot
         const d = Math.sqrt( Math.pow( Xd-Xb, 2) + Math.pow( Yd-Yb, 2));
-        console.log(d);
+        //console.log(d);
 
         // Limit the dot within the eye
         let Xr;
@@ -72,6 +73,8 @@ function renderEye(baseEl, dotEl) {
         // Update position of the dot
         Xr = Xr - dotRadius;
         Yr = Yr - dotRadius;
+        console.log(Xr);
+        console.log(Yr);
         setTimeout(function(){
             dotEl.style.left = `${Xr}px`;
             dotEl.style.top = `${Yr}px`;

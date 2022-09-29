@@ -379,30 +379,53 @@ label {
     position: relative; /*required for eyes*/
 }
 
-.alex-g-container > div > div {
-    position: absolute;  /*required for eyes*/
-    border: 1px solid red;
-    background-color: red;
-    opacity: 0.2;
-    border-radius: 50%;
+.eye-container, .eye-base, .eye-dot {
+	border-radius: 50%;
 }
 
+.eye-container {
+    position: absolute;  /*required for eyes*/
+
+    
+}
+
+.eye-base {
+    height: 100%;
+	/* Make the dot centered in the eye on page load */
+	display: flex;  
+	justify-content: center;
+	align-items: center;
+}
+
+
+
 #leftEye {
-    height: 3%;
-    width: 3%;
-    top: 42.2%;
-    left: 31.5%;
+    height: 2.3%;
+    width: 2.3%;
+    top: 42.7%;
+    left: 31.8%;
 }
 
 #rightEye {
-    height: 3.5%;
-    width: 3.5%;
-    top: 41.6%;
-    left: 37.2%;
+    height: 3%;
+    width: 3%;
+    top: 42%;
+    left: 37.5%;
+}
+
+.eye-dot {
+    display: block;
+	position: fixed; /* required for script to work */
+	/*height: 0.7%;
+	width: 0.6%;*/
+    height: 8px;
+    width: 8px;
+	background-color: #194b3f;
 }
 
 #behold {
     /*width: 700px;*/ 
+    /*aspect-ratio: 1 / 1;*/
     position: relative;  /*required for eyes*/
     background-color: darkgray;
 }
