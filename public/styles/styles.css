@@ -377,6 +377,7 @@ label {
 
     margin: 100px;
     position: relative; /*required for eyes*/
+
 }
 
 .eye-container, .eye-base, .eye-dot {
@@ -384,9 +385,7 @@ label {
 }
 
 .eye-container {
-    position: absolute;  /*required for eyes*/
-
-    
+    position: absolute;  /*required for eyes*/ 
 }
 
 .eye-base {
@@ -396,8 +395,6 @@ label {
 	justify-content: center;
 	align-items: center;
 }
-
-
 
 #leftEye {
     height: 2.3%;
@@ -415,11 +412,11 @@ label {
 
 .eye-dot {
     display: block;
-	position: fixed; /* required for script to work */
-	/*height: 0.7%;
-	width: 0.6%;*/
-    height: 8px;
-    width: 8px;
+	position: absolute; /* required for script to work */
+	/* height: 50%;
+	width: 50%; */
+    height: 7px;
+    width: 7px;
 	background-color: #194b3f;
 }
 
@@ -427,7 +424,6 @@ label {
     /*width: 700px;*/ 
     /*aspect-ratio: 1 / 1;*/
     position: relative;  /*required for eyes*/
-    background-color: darkgray;
 }
 
 .show-plunks {
