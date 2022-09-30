@@ -1,4 +1,15 @@
+html,
 body {
+    scroll-behavior: smooth;
+}
+
+
+body {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
     width: 90%;
     max-width: 900px;
     margin: auto;
@@ -8,6 +19,10 @@ body {
     line-height: 2;
     color: #194b3f;
     background-image: url("../img/bg.svg");
+}
+
+.logo {
+    margin: 2em;
 }
 
 .logo .mobile {
@@ -376,24 +391,28 @@ label {
     justify-content: center;
 
     margin: 100px;
-    position: relative; /*required for eyes*/
+    position: relative;
+    /*required for eyes*/
 
 }
 
-.eye-container, .eye-base, .eye-dot {
-	border-radius: 50%;
+.eye-container,
+.eye-base,
+.eye-dot {
+    border-radius: 50%;
 }
 
 .eye-container {
-    position: absolute;  /*required for eyes*/ 
+    position: absolute;
+    /*required for eyes*/
 }
 
 .eye-base {
     height: 100%;
-	/* Make the dot centered in the eye on page load */
-	display: flex;  
-	justify-content: center;
-	align-items: center;
+    /* Make the dot centered in the eye on page load */
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 #leftEye {
@@ -412,18 +431,20 @@ label {
 
 .eye-dot {
     display: block;
-	position: absolute; /* required for script to work */
-	/* height: 50%;
+    position: absolute;
+    /* required for script to work */
+    /* height: 50%;
 	width: 50%; */
     height: 7px;
     width: 7px;
-	background-color: #194b3f;
+    background-color: #194b3f;
 }
 
 #behold {
-    /*width: 700px;*/ 
+    /*width: 700px;*/
     /*aspect-ratio: 1 / 1;*/
-    position: relative;  /*required for eyes*/
+    position: relative;
+    /*required for eyes*/
 }
 
 .show-plunks {
@@ -509,6 +530,25 @@ label {
     font-style: italic;
     font-weight: 600;
     padding: 3em 9em;
+}
+
+/* custom scrollbar */
+::-webkit-scrollbar {
+    width: 5px;
+}
+
+::-webkit-scrollbar-track {
+    background: #46AC94;
+    border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb {
+    background: #194b3f;
+    border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: #000;
 }
 
 
