@@ -81,6 +81,7 @@ h2 {
     margin-left: 15px;
     margin-right: 15px;
     margin-top: 15px;
+    margin-bottom: 2em;
 }
 
 .preview-box {
@@ -681,7 +682,8 @@ input:checked+.slider:before {
         float: none;
     }
 
-    button, #image-picker-label {
+    button,
+    #image-picker-label {
         font-size: 18px;
     }
 
@@ -697,7 +699,8 @@ input:checked+.slider:before {
         padding: 0px;
     }
 
-    .button-up, .button-down {
+    .button-up,
+    .button-down {
         margin: 0 auto;
     }
 
@@ -719,10 +722,35 @@ input:checked+.slider:before {
     }
 }
 
-
-
 @media only screen and (max-width: 760px) {
 
+    .toggle {
+        gap: 1em;
+    }
+
+    #preview-container {
+        font-size: 12px;
+    }
+
+    #timestamp-and-id {
+        float: right;
+        display: flex;
+        flex-direction: row;
+    }
+
+    #anonymous-date-box {
+        flex-wrap: nowrap;
+        align-items: flex-end;
+        gap: 0px;
+    }
+
+    #anonymous-flag-container {
+        padding: 0px;
+    }
+
+    #timestamp-and-id {
+        padding: 0px;
+    }
 }
 
 @media only screen and (max-width: 600px) {
@@ -732,14 +760,9 @@ input:checked+.slider:before {
     }
 
     anonymous-date-box {
-        flex-direction: column;
         flex-wrap: nowrap;
         align-items: flex-start;
         gap: 10px;
-    }
-
-    #anonymous-text, #timestamp-and-id {
-        font-size: 17px;
     }
 
     #random-flag {
@@ -750,7 +773,10 @@ input:checked+.slider:before {
         width: 100px;
     }
 
-    #preview-text, .disclaimer, .normal, .quoted {
+    #preview-text,
+    .disclaimer,
+    .normal,
+    .quoted {
         font-size: 17px;
     }
 
