@@ -389,11 +389,9 @@ label {
     display: flex;
     align-items: center;
     justify-content: center;
-
     margin: 100px;
     position: relative;
     /*required for eyes*/
-
 }
 
 .eye-container,
@@ -450,7 +448,6 @@ label {
 .show-plunks {
     --offset: 10px;
     --border-size: 2px;
-    /* width: 2em; */
     position: relative;
     padding: 3em 6em;
     appearance: none;
@@ -580,6 +577,9 @@ footer p {
         width: 70vw;
     }
 
+    .alex-g-container {
+        margin: 0px;
+    }
 }
 
 @media only screen and (max-width: 900px) {
@@ -647,6 +647,29 @@ footer p {
         margin-top: 1em;
     }
 
+    .show-plunks {
+        --offset: 3px;
+        --border-size: 2px;
+        padding: 1em 2em;
+    }
+
+    .show-plunks a {
+        font-size: 14px;
+        padding: 1em 2em;
+    }
+
+    .kaomoji {
+        font-size: 12px;
+    }
+
+    footer p {
+        font-size: 12px;
+    }
+
+    .eye-dot {
+        height: 5px;
+        width: 5px;
+    }
 }
 
 @media only screen and (max-width: 740px) {
@@ -710,6 +733,29 @@ footer p {
         margin-top: 1em;
     }
 
+    .show-plunks {
+        --offset: 3px;
+        --border-size: 1px;
+        padding: 0.5em 1em;
+    }
+
+    .show-plunks a {
+        font-size: 12px;
+        padding: 0.5em 1em;
+    }
+
+    .kaomoji {
+        font-size: 10px;
+    }
+
+    footer p {
+        font-size: 10px;
+    }
+
+    .eye-dot {
+        height: 4px;
+        width: 4px;
+    }
 }
 
 @media only screen and (max-width: 600px) {
