@@ -421,17 +421,19 @@ label {
 }
 
 #leftEye {
-    height: 2.3%;
-    width: 2.3%;
-    top: 42.7%;
-    left: 31.8%;
+    height: 2.5%;
+    width: 2.5%;
+    top: 42.6%;
+    left: 31.7%;
+
 }
 
 #rightEye {
-    height: 3%;
-    width: 3%;
-    top: 42%;
-    left: 37.5%;
+    height: 2.5%;
+    width: 2.5%;
+    top: 42.4%;
+    left: 37.7%;
+
 }
 
 .eye-dot {
