@@ -3,19 +3,6 @@ const EYE_IDS = ["leftEye", "rightEye"]; // Add IDs of each eye into this array
 const PROJECTION = 0.02 // Drag/projection effect - decrease number to increase it or set to 1 to remove it (% between base center and mouse position)
 const DELAY = 100;
 
-window.onload = () => {
-
-    console.log("page loaded"); // Things in this section run after the page loaded
-
-    EYE_IDS.forEach(e => {
-        const container = document.getElementById(e);
-        const baseElement = container.querySelector(".eye-base");
-        const dotElement = baseElement.querySelector(".eye-dot");        
-        renderEye(baseElement, dotElement);          
-    });
-
-}
-
 //+ window.pageYOffset;
 
 function renderEye(baseEl, dotEl) {
@@ -83,3 +70,5 @@ function renderEye(baseEl, dotEl) {
     addEventListener("mousemove", (e) => { dotPosition(e); });
 
 }
+
+
