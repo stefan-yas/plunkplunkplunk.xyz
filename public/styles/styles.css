@@ -1,4 +1,15 @@
+html,
 body {
+    scroll-behavior: smooth;
+}
+
+
+body {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
     width: 90%;
     max-width: 900px;
     margin: auto;
@@ -8,6 +19,10 @@ body {
     line-height: 2;
     color: #194b3f;
     background-image: url("../img/bg.svg");
+}
+
+.logo {
+    margin: 2em;
 }
 
 .logo .mobile {
@@ -361,6 +376,188 @@ label {
     background-color: transparent;
 }
 
+.homepage-main {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    align-items: stretch;
+    justify-content: center;
+    margin-bottom: 5em;
+}
+
+.alex-g-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 100px;
+    position: relative;
+    /*required for eyes*/
+}
+
+.eye-container,
+.eye-base,
+.eye-dot {
+    border-radius: 50%;
+}
+
+.eye-container {
+    position: absolute;
+    /*required for eyes*/
+}
+
+.eye-base {
+    height: 100%;
+    /* Make the dot centered in the eye on page load */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#leftEye {
+    height: 2.3%;
+    width: 2.3%;
+    top: 42.7%;
+    left: 31.8%;
+}
+
+#rightEye {
+    height: 3%;
+    width: 3%;
+    top: 42%;
+    left: 37.5%;
+}
+
+.eye-dot {
+    display: block;
+    position: absolute;
+    /* required for script to work */
+    /* height: 50%;
+	width: 50%; */
+    height: 7px;
+    width: 7px;
+    background-color: #194b3f;
+}
+
+#behold {
+    /*width: 700px;*/
+    /*aspect-ratio: 1 / 1;*/
+    position: relative;
+    /*required for eyes*/
+}
+
+.show-plunks {
+    --offset: 10px;
+    --border-size: 2px;
+    position: relative;
+    padding: 3em 6em;
+    appearance: none;
+    border: 0;
+    background: transparent;
+    color: #216857;
+    text-transform: uppercase;
+    letter-spacing: 0.25em;
+    outline: none;
+    cursor: pointer;
+    border-radius: 0;
+    box-shadow: inset 0 0 0 var(--border-size) currentcolor;
+    transition: background 0.8s ease;
+}
+
+.show-plunks:hover {
+    background: rgba(2, 139, 128, 0.1);
+}
+
+.show-plunks_horizontal,
+.show-plunks_vertical {
+    position: absolute;
+    top: var(--horizontal-offset, 0);
+    right: var(--vertical-offset, 0);
+    bottom: var(--horizontal-offset, 0);
+    left: var(--vertical-offset, 0);
+    transition: transform 0.8s ease;
+    will-change: transform;
+}
+
+.show-plunks_horizontal::before,
+.show-plunks_vertical::before {
+    content: '';
+    position: absolute;
+    border: inherit;
+}
+
+.show-plunks_horizontal {
+    --vertical-offset: calc(var(--offset) * -1);
+    border-top: var(--border-size) solid currentcolor;
+    border-bottom: var(--border-size) solid currentcolor;
+}
+
+.show-plunks_horizontal::before {
+    top: calc(var(--vertical-offset) - var(--border-size));
+    bottom: calc(var(--vertical-offset) - var(--border-size));
+    left: calc(var(--vertical-offset) * -1);
+    right: calc(var(--vertical-offset) * -1);
+}
+
+.show-plunks:hover .show-plunks_horizontal {
+    transform: scaleX(0);
+}
+
+.show-plunks_vertical {
+    --horizontal-offset: calc(var(--offset) * -1);
+    border-left: var(--border-size) solid currentcolor;
+    border-right: var(--border-size) solid currentcolor;
+}
+
+.show-plunks_vertical::before {
+    top: calc(var(--horizontal-offset) * -1);
+    bottom: calc(var(--horizontal-offset) * -1);
+    left: calc(var(--horizontal-offset) - var(--border-size));
+    right: calc(var(--horizontal-offset) - var(--border-size));
+}
+
+.show-plunks:hover .show-plunks_vertical {
+    transform: scaleY(0);
+}
+
+.show-plunks a {
+    text-decoration: none;
+    color: #216857;
+    font-size: 25px;
+    font-style: italic;
+    font-weight: 600;
+    padding: 3em 9em;
+}
+
+/* custom scrollbar */
+::-webkit-scrollbar {
+    width: 5px;
+}
+
+::-webkit-scrollbar-track {
+    background: #46AC94;
+    border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb {
+    background: #194b3f;
+    border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: #000;
+}
+
+.kaomoji {
+    text-align: center;
+    margin-top: 0.5em;
+    margin-bottom: 0.5em;
+    font-size: 35px;
+}
+
+footer p {
+    background-color: transparent;
+    margin-bottom: 1em;
+}
 
 @media only screen and (max-width: 1100px) {
 
@@ -380,6 +577,9 @@ label {
         width: 70vw;
     }
 
+    .alex-g-container {
+        margin: 0px;
+    }
 }
 
 @media only screen and (max-width: 900px) {
@@ -447,6 +647,29 @@ label {
         margin-top: 1em;
     }
 
+    .show-plunks {
+        --offset: 3px;
+        --border-size: 2px;
+        padding: 1em 2em;
+    }
+
+    .show-plunks a {
+        font-size: 14px;
+        padding: 1em 2em;
+    }
+
+    .kaomoji {
+        font-size: 12px;
+    }
+
+    footer p {
+        font-size: 12px;
+    }
+
+    .eye-dot {
+        height: 5px;
+        width: 5px;
+    }
 }
 
 @media only screen and (max-width: 740px) {
@@ -510,6 +733,29 @@ label {
         margin-top: 1em;
     }
 
+    .show-plunks {
+        --offset: 3px;
+        --border-size: 1px;
+        padding: 0.5em 1em;
+    }
+
+    .show-plunks a {
+        font-size: 12px;
+        padding: 0.5em 1em;
+    }
+
+    .kaomoji {
+        font-size: 10px;
+    }
+
+    footer p {
+        font-size: 10px;
+    }
+
+    .eye-dot {
+        height: 4px;
+        width: 4px;
+    }
 }
 
 @media only screen and (max-width: 600px) {
