@@ -580,6 +580,11 @@ footer p {
     .alex-g-container {
         margin: 0px;
     }
+
+    .logo {
+        margin-left: 0em;
+        margin-right: 0em;
+    }
 }
 
 @media only screen and (max-width: 900px) {
