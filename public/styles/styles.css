@@ -464,7 +464,6 @@ label {
     border-radius: 0;
     box-shadow: inset 0 0 0 var(--border-size) currentcolor;
     transition: background 0.8s ease;
-    margin-bottom: 3em;
 }
 
 .show-plunks:hover {
@@ -551,6 +550,16 @@ label {
     background: #000;
 }
 
+.kaomoji {
+    text-align: center;
+    margin-top: 0.5em;
+    margin-bottom: 0.5em;
+    font-size: 35px;
+}
+
+footer p {
+    background-color: transparent;
+}
 
 @media only screen and (max-width: 1100px) {
 
