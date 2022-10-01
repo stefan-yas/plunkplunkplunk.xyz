@@ -534,7 +534,6 @@ input:checked+.slider:before {
     width: auto;
     display: flex;
     justify-content: center;
-    border-top: 3px dashed var(--new-style-anonymous-text);
 }
 
 #outputCanvas {
