@@ -559,6 +559,10 @@ footer p {
     margin-bottom: 1em;
 }
 
+.plunks-main {
+    margin-bottom: 2em;
+}
+
 @media only screen and (max-width: 1100px) {
 
     .plunk-grid-container {
