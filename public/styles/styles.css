@@ -87,6 +87,10 @@ p {
     margin: 15px;
 }
 
+main {
+    margin-bottom: 2em;
+}
+
 .plunk-grid-container {
     grid-template-columns: auto;
     display: grid;
@@ -107,6 +111,7 @@ p {
     display: flex;
     justify-content: center;
     flex-direction: column;
+    
 }
 
 #generate {
