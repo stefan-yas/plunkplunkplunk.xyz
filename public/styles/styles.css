@@ -389,6 +389,7 @@ label {
     align-items: stretch;
     justify-content: center;
     margin-bottom: 5em;
+    border: none;
 }
 
 .alex-g-container {
