@@ -654,25 +654,8 @@ footer p {
         margin-right: 0em;
     }
 
-    .whoarewe {
-        font-size: 15px;
-        padding: 1.5em 3em;
-    }
-
     #authors-container {
         flex-direction: column;
-        gap: 1em;
-        margin-top: 0em;
-    }
-
-    .author a {
-        font-size: 15px;
-        padding: 1.5em 3em;
-    }
-
-    .author-eva a {
-        font-size: 15px;
-        padding: 1.5em 3em;
     }
 }
 
@@ -747,6 +730,26 @@ footer p {
     }
 
     .show-plunks a {
+        font-size: 15px;
+        padding: 1.5em 3em;
+    }
+
+    #authors-container {
+        margin-top: 0px;
+        gap: 0.5em;
+    }
+
+    .whoarewe {
+        font-size: 15px;
+        padding: 1.5em 3em;
+    }
+
+    .author a {
+        font-size: 15px;
+        padding: 1.5em 3em;
+    }
+
+    .author-eva a {
         font-size: 15px;
         padding: 1.5em 3em;
     }
@@ -832,6 +835,21 @@ footer p {
     }
 
     .show-plunks a {
+        font-size: 14px;
+        padding: 1.2em 2.4em;
+    }
+
+    .whoarewe {
+        font-size: 14px;
+        padding: 1.2em 2.4em;
+    }
+
+    .author a {
+        font-size: 14px;
+        padding: 1.2em 2.4em;
+    }
+
+    .author-eva a {
         font-size: 14px;
         padding: 1.2em 2.4em;
     }
