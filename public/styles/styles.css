@@ -64,6 +64,7 @@ h1 {
 }
 
 h2 {
+    text-align: center;
     padding: 10px;
     margin: 15px;
     margin-bottom: 30px;
@@ -88,6 +89,7 @@ p {
 }
 
 main {
+    width: 100%;
     margin-bottom: 2em;
     border: 3px dashed #4f8d7d;
 }
