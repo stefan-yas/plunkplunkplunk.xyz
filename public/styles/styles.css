@@ -449,7 +449,6 @@ label {
     --offset: 10px;
     --border-size: 2px;
     position: relative;
-    padding: 3em 6em;
     appearance: none;
     border: 0;
     background: transparent;
@@ -520,12 +519,13 @@ label {
 }
 
 .show-plunks a {
+    display: block;
     text-decoration: none;
     color: #216857;
     font-size: 25px;
     font-style: italic;
     font-weight: 600;
-    padding: 3em 9em;
+    padding: 2em 9em;
 }
 
 /* custom scrollbar */
