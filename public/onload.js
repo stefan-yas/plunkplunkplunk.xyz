@@ -7,12 +7,14 @@ window.onload = () => {
 
     // Initiate eye movement (only on screen bigger than 700)
     if (vw > 700) {
-        EYE_IDS.forEach(e => {
-            const container = document.getElementById(e);
-            const baseElement = container.querySelector(".eye-base");
-            const dotElement = baseElement.querySelector(".eye-dot");        
-            renderEye(baseElement, dotElement);          
+        const parent = document.getElementById(EYES_CONTAINER);
+        const children = parent.querySelectorAll(":scope > .eye-container");
+        children.forEach(e => {
+            const id = e.id;
+            EYE_IDS.push(id);
         });
+
+        renderEyes();
     }
 
     // Initiate emoji
