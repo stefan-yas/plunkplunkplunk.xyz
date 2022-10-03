@@ -19,6 +19,8 @@
     <link href="https://fonts.googleapis.com/css2?family=Comfortaa&display=swap" rel="stylesheet">
     <link rel="icon" type=”image/svg+xml” href="./img/favicon.svg" />
     <link rel="canonical" href="https://plunkplunkplunk.xyz" />
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6398309719214372"
+        crossorigin="anonymous"></script>
 </head>
 
 <body>
@@ -31,27 +33,70 @@
 
     </header>
 
+    <main class="homepage-main">
 
-    <footer>
-        <div class="navbar">
-            <div class="footer-flex-container">
-                <div class="footer-flex-item">
-                    <a href="https://plunkplunkplunk.xyz/whats-a-plunk">what's a plunk?</a>
+        <div id="alex-g" class="alex-g-container">
+            <img id="behold" src="./img/alex-g.svg" alt="alex-g" width="100%">
+            <div id="leftEye" class="eye-container">
+                <div class="eye-base">
+                    <div class="eye-dot">
+                    </div>
                 </div>
-                <div class="footer-flex-item">
-                    <a href="https://plunkplunkplunk.xyz/plunks">plunks</a>
-                </div>
-                <div class="footer-flex-item">
-                    <a href="https://stefanyas.me" target="_blank">who am i?</a>
-                </div>
-                <div class="footer-flex-item">
-                    <a href="https://github.com/stefan-yas/plunkplunkplunk.xyz" target="_blank">github</a>
+            </div>
+            <div id="rightEye" class="eye-container">
+                <div class="eye-base">
+                    <div class="eye-dot">
+                    </div>
                 </div>
             </div>
         </div>
+
+        <button class="show-plunks">
+            <a href="/whats-a-plunk">what's a plunk?</a>
+            <div class="show-plunks_horizontal"></div>
+            <div class="show-plunks_vertical"></div>
+        </button>
+
+        <span class="kaomoji"></span>
+
+        <button class="show-plunks">
+            <a href="/plunks">Plunks</a>
+            <div class="show-plunks_horizontal"></div>
+            <div class="show-plunks_vertical"></div>
+        </button>
+
+        <span class="kaomoji"></span>
+
+        <button id="authors" class="show-plunks" type="change" onclick="showAuthors()">
+            <span class="whoarewe">who are we?</span>
+            <div class="show-plunks_horizontal"></div>
+            <div class="show-plunks_vertical"></div>
+        </button>
+
+        <div id="authors-container">
+            <div class="author-eva"><a href="https://github.com/VodaJeMokra/" target="_blank">Eva</a></div>
+            <div class="author"><a href="https://stefanyas.me" target="_blank">Stefan</a></div>
+        </div>
+
+        <span class="kaomoji"></span>
+
+        <button class="show-plunks">
+            <a href="https://github.com/stefan-yas/plunkplunkplunk.xyz" target="_blank">github</a>
+            <div class="show-plunks_horizontal"></div>
+            <div class="show-plunks_vertical"></div>
+        </button>
+
+    </main>
+
+    <footer>
+        <p>©️ 2022 Stefan Yas</p>
     </footer>
 
     <script data-goatcounter="https://plunk.goatcounter.com/count" async src="//gc.zgo.at/count.js"></script>
+    <script src="behold.js"></script>
+    <script src="emojis.js"></script>
+    <script src="onload.js"></script>
+    <script src="authors.js"></script>
 
 </body>
 
