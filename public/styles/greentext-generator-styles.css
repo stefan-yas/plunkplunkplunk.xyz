@@ -281,6 +281,7 @@ input:checked+.slider:before {
 #anonymous-text {
     color: var(--new-style-anonymous-text);
     font-weight: 600;
+    white-space: nowrap;
 }
 
 /* Old Style */
@@ -724,12 +725,23 @@ input:checked+.slider:before {
 
 @media only screen and (max-width: 760px) {
 
+    /* .greentext-body {
+        width: 100%;
+    } */
+
     .toggle {
         gap: 1em;
     }
 
-    #preview-container {
-        font-size: 12px;
+    #preview-text,
+    .normal,
+    .quoted {
+        font-size: 17px;
+    }
+
+    .disclaimer {
+        font-size: 17px;
+        white-space: nowrap;
     }
 
     #timestamp-and-id {
@@ -739,17 +751,23 @@ input:checked+.slider:before {
     }
 
     #anonymous-date-box {
+        flex-direction: column;
+        font-size: 17px;
         flex-wrap: nowrap;
-        align-items: flex-end;
-        gap: 0px;
+        align-items: flex-start;
+        gap: 10px;
     }
 
     #anonymous-flag-container {
-        padding: 0px;
+        padding-left: 20px;
     }
 
     #timestamp-and-id {
-        padding: 0px;
+        padding: 0px 0px 0px 20px;
+    }
+
+    #preview-image {
+        max-width: 150px;
     }
 }
 
@@ -761,7 +779,6 @@ input:checked+.slider:before {
 
     anonymous-date-box {
         flex-wrap: nowrap;
-        align-items: flex-start;
         gap: 10px;
     }
 
@@ -774,14 +791,13 @@ input:checked+.slider:before {
     }
 
     #preview-text,
-    .disclaimer,
     .normal,
     .quoted {
         font-size: 17px;
     }
 
     .disclaimer {
-        font-size: 15px;
+        font-size: 17   px;
         white-space: nowrap;
     }
 
