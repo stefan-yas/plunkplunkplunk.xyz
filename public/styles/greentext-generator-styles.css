@@ -81,6 +81,7 @@ h2 {
     margin-left: 15px;
     margin-right: 15px;
     margin-top: 15px;
+    margin-bottom: 2em;
 }
 
 .preview-box {
@@ -281,6 +282,7 @@ input:checked+.slider:before {
 #anonymous-text {
     color: var(--new-style-anonymous-text);
     font-weight: 600;
+    white-space: nowrap;
 }
 
 /* Old Style */
@@ -686,7 +688,8 @@ input:checked+.slider:before {
         float: none;
     }
 
-    button, #image-picker-label {
+    button,
+    #image-picker-label {
         font-size: 18px;
     }
 
@@ -702,7 +705,8 @@ input:checked+.slider:before {
         padding: 0px;
     }
 
-    .button-up, .button-down {
+    .button-up,
+    .button-down {
         margin: 0 auto;
     }
 
@@ -716,7 +720,7 @@ input:checked+.slider:before {
 
     .toggle {
         flex-direction: column;
-        gap: 15px;
+        gap: 0px;
     }
 
     .greentext-h3-customize {
@@ -724,10 +728,52 @@ input:checked+.slider:before {
     }
 }
 
-
-
 @media only screen and (max-width: 760px) {
 
+    /* .greentext-body {
+        width: 100%;
+    } */
+
+    .toggle {
+        gap: 1em;
+    }
+
+    #preview-text,
+    .normal,
+    .quoted {
+        font-size: 17px;
+    }
+
+    .disclaimer {
+        font-size: 17px;
+        white-space: nowrap;
+    }
+
+    #timestamp-and-id {
+        float: right;
+        display: flex;
+        flex-direction: row;
+    }
+
+    #anonymous-date-box {
+        flex-direction: column;
+        font-size: 17px;
+        flex-wrap: nowrap;
+        align-items: flex-start;
+        gap: 10px;
+    }
+
+    #anonymous-flag-container {
+        padding-left: 20px;
+    }
+
+    #timestamp-and-id {
+        padding: 0px 0px 0px 20px;
+    }
+
+    #preview-image {
+        max-width: 150px;
+    }
 }
 
 @media only screen and (max-width: 600px) {
@@ -737,14 +783,8 @@ input:checked+.slider:before {
     }
 
     anonymous-date-box {
-        flex-direction: column;
         flex-wrap: nowrap;
-        align-items: flex-start;
         gap: 10px;
-    }
-
-    #anonymous-text, #timestamp-and-id {
-        font-size: 17px;
     }
 
     #random-flag {
@@ -755,12 +795,14 @@ input:checked+.slider:before {
         width: 100px;
     }
 
-    #preview-text, .disclaimer, .normal, .quoted {
+    #preview-text,
+    .normal,
+    .quoted {
         font-size: 17px;
     }
 
     .disclaimer {
-        font-size: 15px;
+        font-size: 17   px;
         white-space: nowrap;
     }
 
