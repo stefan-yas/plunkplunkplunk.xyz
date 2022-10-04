@@ -370,7 +370,12 @@ function drawImageOutput() {
             console.log(window.innerWidth);
             if (window.innerWidth <= 600) {
                 // mobile version
-                element.getElementById("preview-image-and-text").style.background = "red";
+                //element.getElementById("preview-image-and-text").style.background = "red";
+                element.getElementById("preview-image-and-text").style.paddingTop = "20px";
+                element.getElementById("preview-image-and-text").style.paddingBottom = "20px";
+                element.getElementById("anonymous-date-box").style.paddingTop = "10px";
+                element.getElementById("anonymous-date-box").style.paddingBottom = "10px";
+                element.getElementById("preview-container").style.width = "350px";
             } else {
                 // desktop version
                 element.getElementById("preview-container").style.width = "834px";
