@@ -1,7 +1,7 @@
 # plunkplunkplunk.xyz
 👽 A fun JavaScript canvas.
 
-> Source files for our [project website](https://plunkplunkplunk.xyz) built with HTML, CSS and JavaScript and hosted on Firebase.
+> Source files for our [project website](https://plunkplunkplunk.xyz) built with HTML, CSS, and JavaScript and hosted on Firebase.
 
 ### Description
 
